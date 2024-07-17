@@ -83,16 +83,19 @@ class PersonalWebsiteManager:
             <!-- social network icons -->
             <div class="social">
                 <a href="{self.bio_data["github"]}" target="_blank">
-                <span class="{self.bio_data["icons"]["github"]}" style="display:inline; text-decoration: none"></span>
+                    <i class="fab fa-github svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["scholar"]}" target="_blank">
-                <span class="{self.bio_data["icons"]["scholar"]}" style="display:inline; text-decoration: none"></span>
+                    <i class="ai ai-google-scholar svg-inline--fa fa-w-16 fa-2x"></i>
+                </a>
+                <a href="{self.bio_data["twitter"]}" target="_blank">
+                    <i class="fab fa-twitter svg-inline--fa fa-w-14 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["linkedin"]}" target="_blank">
-                <span class="{self.bio_data["icons"]["linkedin"]}" style="display:inline; text-decoration: none"></span>
+                    <i class="fab fa-linkedin svg-inline--fa fa-w-14 fa-2x"></i>
                 </a>
             </div>
-
+            <!-- menu -->
             <div id="sidebar" class="menu sticky is-hidden-mobile">
                 <p class="menu-label"><b>Quick Links</b></p>
                 <ul class="menu-list">
@@ -189,6 +192,7 @@ if __name__ == "__main__":
         "email": "hyli1606@gmail.com",
         "github": "https://github.com/haoyangli16",
         "scholar": "https://scholar.google.com/citations?user=your_scholar_id&hl=en",
+        "twitter": "https://x.com/Haoyang1i",
         "linkedin": "https://www.linkedin.com/in/your_linkedin/",
         "cv": "path_to_your_CV",
         "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank" style="text-decoration: underline;">Hao Su</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.',
@@ -198,6 +202,7 @@ if __name__ == "__main__":
         "icons": {
             "github": "fab fa-github fa-2x",
             "scholar": "fab fa-google fa-2x",
+            "twitter": "fab fa-twitter fa-2x",
             "linkedin": "fab fa-linkedin fa-2x",
         },
     }
