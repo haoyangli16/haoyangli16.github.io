@@ -86,7 +86,7 @@ class PersonalWebsiteManager:
                    <i class="fab fa-github-square svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["scholar"]}" target="_blank">
-                   <i class="ai ai-google-scholar svg-inline--fa fa-w-16 fa-2x"></i>
+                   <i class="ai ai-google-scholar-square svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["twitter"]}" target="_blank">
                   <i class="fab fa-twitter-square svg-inline--fa fa-w-16 fa-2x"></i>
