@@ -194,7 +194,7 @@ def delete_project(index):
         print(f"Project index '{index}' out of range.")
 
 # Update bio data example
-update_bio_data("profile_image", "https://github.com/haoyangli16/haoyangli16.github.io/blob/master/images/website.JPG")
+update_bio_data("profile_image", "images/website.JPG")
 update_bio_data("icons", {
     "github": "fab fa-github fa-2x",
     "scholar": "fab fa-google fa-2x",
