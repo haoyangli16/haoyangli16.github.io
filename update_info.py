@@ -64,9 +64,9 @@ class PersonalWebsiteManager:
                   <div class="sticky">
                     <figure class="image is-128x128">
                       <img class="is-rounded" src="{self.bio_data["profile_image"]}">
+                      <br>
                     </figure>
                     <div class="content">
-                      <br>
                       <h3>{self.bio_data["name"]}</h3>
                       <h6>{self.bio_data["degree"]}</h6>
                       <h6>{self.bio_data["work_place"]}</h6>
@@ -75,6 +75,7 @@ class PersonalWebsiteManager:
                     <!-- details -->
                     <div class="details">
                       <h3>EMAIL</h3>
+                      <br>
                       <p><a href="mailto:{self.bio_data["email"]}">{self.bio_data["email"].replace('@', '[at]').replace('.', '[dot]')}</a></p>
                     </div>
                     <!-- social network icons -->
