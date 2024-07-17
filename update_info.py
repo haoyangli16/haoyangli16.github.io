@@ -5,10 +5,16 @@ class PersonalWebsiteManager:
         self.research_data = research_data
 
     def generate_html(self):
-        news_items = ''.join([f'<li><span>{news["date"]} - {news["content"]}</span></li>' for news in self.news_data])
-        
-        research_items = ''.join([
-            f'''
+        news_items = "".join(
+            [
+                f'<li><span>{news["date"]} - {news["content"]}</span></li>'
+                for news in self.news_data
+            ]
+        )
+
+        research_items = "".join(
+            [
+                f"""
             <article class="columns">
               <div class="column is-3">
                 <figure class="image">
@@ -25,9 +31,12 @@ class PersonalWebsiteManager:
                 </div>
               </div>
             </article>
-            ''' for research in self.research_data])
+            """
+                for research in self.research_data
+            ]
+        )
 
-        html_content = f'''
+        html_content = f"""
         <!DOCTYPE html>
         <html>
 
@@ -57,6 +66,7 @@ class PersonalWebsiteManager:
                       <img class="is-rounded" src="{self.bio_data["profile_image"]}">
                     </figure>
                     <div class="content">
+                      <br>
                       <h3>{self.bio_data["name"]}</h3>
                       <h6>{self.bio_data["degree"]}</h6>
                       <h6>{self.bio_data["work_place"]}</h6>
@@ -123,8 +133,8 @@ class PersonalWebsiteManager:
         </body>
 
         </html>
-        '''
-        
+        """
+
         return html_content
 
     def update_bio_data(self, field, value):
@@ -134,13 +144,15 @@ class PersonalWebsiteManager:
             print(f"Field '{field}' not found in bio data.")
 
     def add_project(self, year, title, authors, conference, links):
-        self.research_data.append({
-            "year": year,
-            "title": title,
-            "authors": authors,
-            "conference": conference,
-            "links": links
-        })
+        self.research_data.append(
+            {
+                "year": year,
+                "title": title,
+                "authors": authors,
+                "conference": conference,
+                "links": links,
+            }
+        )
 
     def update_project(self, index, field, value):
         if 0 <= index < len(self.research_data):
@@ -157,9 +169,9 @@ class PersonalWebsiteManager:
         else:
             print(f"Project index '{index}' out of range.")
 
-    def save_html(self, filename='index.html'):
+    def save_html(self, filename="index.html"):
         html_content = self.generate_html()
-        with open(filename, 'w') as file:
+        with open(filename, "w") as file:
             file.write(html_content)
         print(f"HTML file '{filename}' generated successfully.")
 
@@ -177,18 +189,21 @@ if __name__ == "__main__":
         "cv": "path_to_your_CV",
         "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank" style="text-decoration: underline;">Hao Su</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.',
         "profile_image": "images/haoyang_website_square.jpg",
-        "research_interests": ["Robotics","Health Care","Embodied AI"],
+        "research_interests": ["Robotics", "Health Care", "Embodied AI"],
         "work_place": "UC San Diego",
         "icons": {
             "github": "fab fa-github fa-2x",
             "scholar": "fab fa-google fa-2x",
-            "linkedin": "fab fa-linkedin fa-2x"
-        }
+            "linkedin": "fab fa-linkedin fa-2x",
+        },
     }
 
     news_data = [
-        {"date": "July, 2024", "content": "Started a new research project on 3D reconstruction."},
-        {"date": "June, 2024", "content": "Published a paper in XYZ journal."}
+        {
+            "date": "July, 2024",
+            "content": "Started a new research project on 3D reconstruction.",
+        },
+        {"date": "June, 2024", "content": "Published a paper in XYZ journal."},
     ]
 
     research_data = [
@@ -200,8 +215,8 @@ if __name__ == "__main__":
             "links": {
                 "project": "link_to_project",
                 "paper": "link_to_paper",
-                "code": "link_to_code"
-            }
+                "code": "link_to_code",
+            },
         }
     ]
 
@@ -209,7 +224,7 @@ if __name__ == "__main__":
     manager = PersonalWebsiteManager(bio_data, news_data, research_data)
 
     # Update bio data example
-    manager.update_bio_data("profile_image", "images/haoyang_website_square.jpg")
+    manager.update_bio_data("profile_image", "images/haoyang_website.jpg")
 
     # Add a new project example
     manager.add_project(
@@ -220,8 +235,8 @@ if __name__ == "__main__":
         links={
             "project": "new_link_to_project",
             "paper": "new_link_to_paper",
-            "code": "new_link_to_code"
-        }
+            "code": "new_link_to_code",
+        },
     )
 
     # Update a project example
