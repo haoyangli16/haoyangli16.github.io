@@ -64,8 +64,8 @@ class PersonalWebsiteManager:
                   <div class="sticky">
                     <figure class="image is-128x128">
                       <img class="is-rounded" src="{self.bio_data["profile_image"]}">
-                      <br>
                     </figure>
+                    <br>
                     <div class="content">
                       <h3>{self.bio_data["name"]}</h3>
                       <h6>{self.bio_data["degree"]}</h6>
