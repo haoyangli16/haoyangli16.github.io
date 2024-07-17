@@ -83,16 +83,16 @@ class PersonalWebsiteManager:
             <!-- social network icons -->
             <div class="social">
                 <a href="{self.bio_data["github"]}" target="_blank">
-                    <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none"></span>
+                   <i class="fab fa-github-square svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["scholar"]}" target="_blank">
-                    <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none"></span>
+                   <i class="ai ai-google-scholar-square svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["twitter"]}" target="_blank">
-                    <span class="fab fa-twitter fa-2x" style="display:inline; text-decoration: none"></span>
+                   <i class="fab fa-twitter-square svg-inline--fa fa-w-16 fa-2x"></i>
                 </a>
                 <a href="{self.bio_data["linkedin"]}" target="_blank">
-                    <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none"></span>
+                   <i class="fab fa-linkedin svg-inline--fa fa-w-14 fa-2x"></i>
                 </a>
             </div>
             <!-- menu -->
