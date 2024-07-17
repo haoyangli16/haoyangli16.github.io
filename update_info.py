@@ -73,12 +73,11 @@ class PersonalWebsiteManager:
                 <h3>{self.bio_data["name"]}</h3>
                 <h6>{self.bio_data["chinese_name"]}</h6>
                 <h6>{self.bio_data["work_place"]}</h6>
-                <h6>{'/ '.join(self.bio_data["research_interests"])}</h6>
+                <h6>{' / '.join(self.bio_data["research_interests"])}</h6>
             </div>
             <!-- details -->
             <div class="details">
                 <h3>EMAIL</h3>
-                <br>
                 <p><a href="mailto:{self.bio_data["email"]}">{self.bio_data["email"].replace('@', '<br>[at]').replace('.', '[dot]')}</a></p>
             </div>
             <!-- social network icons -->
