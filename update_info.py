@@ -1,8 +1,9 @@
 class PersonalWebsiteManager:
-    def __init__(self, bio_data, news_data, research_data):
+    def __init__(self, bio_data, news_data, research_data, menu_data):
         self.bio_data = bio_data
         self.news_data = news_data
         self.research_data = research_data
+        self.menu_data = menu_data
 
     def generate_html(self):
         news_items = "".join(
@@ -36,24 +37,30 @@ class PersonalWebsiteManager:
             ]
         )
 
+        self.menu_items = ""
+        for key, value in self.menu_data.items():
+            self.menu_items += f'<li><a href="#{key}">{value}</a></li>'
+
         html_content = f"""
         <!DOCTYPE html>
         <html>
 
         <head>
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>{self.bio_data["name"]}'s Homepage</title>
-          <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-          <!--<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">-->
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-          <!-- Bulma Version 0.7.5-->
-          <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-          <link href='css/style.css' rel='stylesheet' type='text/css'>
-          <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
-          <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
-          <script src="js/menuspy.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Haoyang Li's Homepage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/css.css" rel="stylesheet">
+        <link href="css/svg.css" rel="stylesheet" type="text/css">
+        <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
+        <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
+        <script src="js/menuspy.js"></script>
         </head>
 
         <body>
@@ -95,9 +102,7 @@ class PersonalWebsiteManager:
                     <div id="sidebar" class="menu sticky is-hidden-mobile">
                       <p class="menu-label"><b>Quick Links</b></p>
                       <ul class="menu-list">
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#intro">Intro</a></li>
-                        <li><a href="#research">Research</a></li>
+                        {self.menu_items}
                       </ul>
                     </div>
                   </div>
@@ -116,7 +121,7 @@ class PersonalWebsiteManager:
                     <p><a href="{self.bio_data["cv"]}">[CV]</a></p>
 
                     <!--Research-->
-                    <h3 id="research">Research</h3>
+                    <h3 id="research">Selected Projects</h3>
                     <div id="research-list">
                       {research_items}
                     </div>
@@ -223,8 +228,15 @@ if __name__ == "__main__":
         }
     ]
 
+    menu_data = {
+        "news": "News",
+        "intro": "Intro",
+        "research": "Selected Projects",
+        "work": "Work Experience",
+    }
+
     # Create an instance of PersonalWebsiteManager
-    manager = PersonalWebsiteManager(bio_data, news_data, research_data)
+    manager = PersonalWebsiteManager(bio_data, news_data, research_data, menu_data)
 
     # Update bio data example
     manager.update_bio_data("profile_image", "images/haoyang_website.jpg")
