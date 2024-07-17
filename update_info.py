@@ -1,9 +1,8 @@
 class PersonalWebsiteManager:
-    def __init__(self, bio_data, news_data, research_data, menu_data):
+    def __init__(self, bio_data, news_data, research_data):
         self.bio_data = bio_data
         self.news_data = news_data
         self.research_data = research_data
-        self.menu_data = menu_data
 
     def generate_html(self):
         news_items = "".join(
@@ -36,10 +35,6 @@ class PersonalWebsiteManager:
                 for research in self.research_data
             ]
         )
-
-        self.menu_items = ""
-        for key, value in self.menu_data.items():
-            self.menu_items += f'<li><a href="#{key}">{value}</a></li>'
 
         html_content = f"""
         <!DOCTYPE html>
@@ -76,7 +71,6 @@ class PersonalWebsiteManager:
                     <div class="content">
                       <h3>{self.bio_data["name"]}</h3>
                       <h6>{self.bio_data["chinese_name"]}</h6>
-                    #   <h6>{self.bio_data["degree"]}</h6>
                       <h6>{self.bio_data["work_place"]}</h6>
                       <h6>{'/ '.join(self.bio_data["research_interests"])}</h6>
                     </div>
@@ -102,7 +96,9 @@ class PersonalWebsiteManager:
                     <div id="sidebar" class="menu sticky is-hidden-mobile">
                       <p class="menu-label"><b>Quick Links</b></p>
                       <ul class="menu-list">
-                        {self.menu_items}
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#research">Selected Projects</a></li>
                       </ul>
                     </div>
                   </div>
@@ -236,7 +232,7 @@ if __name__ == "__main__":
     }
 
     # Create an instance of PersonalWebsiteManager
-    manager = PersonalWebsiteManager(bio_data, news_data, research_data, menu_data)
+    manager = PersonalWebsiteManager(bio_data, news_data, research_data)
 
     # Update bio data example
     manager.update_bio_data("profile_image", "images/haoyang_website.jpg")
