@@ -67,7 +67,6 @@ class PersonalWebsiteManager:
                     <figure class="image is-128x128">
                       <img class="is-rounded" src="{self.bio_data["profile_image"]}">
                     </figure>
-                    <br>
                     <div class="content">
                       <h3>{self.bio_data["name"]}</h3>
                       <h6>{self.bio_data["chinese_name"]}</h6>
