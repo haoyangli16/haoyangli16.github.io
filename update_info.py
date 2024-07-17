@@ -68,7 +68,8 @@ class PersonalWebsiteManager:
                     <br>
                     <div class="content">
                       <h3>{self.bio_data["name"]}</h3>
-                      <h6>{self.bio_data["degree"]}</h6>
+                      <h6>{self.bio_data["chinese_name"]}</h6>
+                    #   <h6>{self.bio_data["degree"]}</h6>
                       <h6>{self.bio_data["work_place"]}</h6>
                       <h6>{'/ '.join(self.bio_data["research_interests"])}</h6>
                     </div>
@@ -182,7 +183,8 @@ if __name__ == "__main__":
     # Initial data
     bio_data = {
         "name": "Haoyang Li",
-        "degree": "Undergraduate student",
+        "chinese_name": "李昊洋",
+        "degree": "Undergraduate Student",
         "email": "hyli1606<br>@gmail.com",
         "github": "https://github.com/haoyangli16",
         "scholar": "https://scholar.google.com/citations?user=your_scholar_id&hl=en",
@@ -190,7 +192,7 @@ if __name__ == "__main__":
         "cv": "path_to_your_CV",
         "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank" style="text-decoration: underline;">Hao Su</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.',
         "profile_image": "images/haoyang_website_square.jpg",
-        "research_interests": ["Robotics", "Health Care", "Embodied AI"],
+        "research_interests": ["Health Care", "Robotics", "Embodied AI"],
         "work_place": "UC San Diego",
         "icons": {
             "github": "fab fa-github fa-2x",
