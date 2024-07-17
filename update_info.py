@@ -37,104 +37,106 @@ class PersonalWebsiteManager:
         )
 
         html_content = f"""
-        <!DOCTYPE html>
-        <html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haoyang Li's Homepage</title>
+    <!-- Bulma Version-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="js/menuspy.js"></script>
 
-        <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Haoyang Li's Homepage</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <!--  css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="css/css.css" rel="stylesheet">
-        <link href="css/svg.css" rel="stylesheet" type="text/css">
-        <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
-        <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
-        <script src="js/menuspy.js"></script>
-        </head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/svg.css" rel="stylesheet" type="text/css">
+</head>
 
-        <body>
-          <section class="section">
-            <div class="container">
-              <div class="columns">
-                <div class="column is-2">
-                  <div class="sticky">
-                    <figure class="image is-128x128">
-                      <img class="is-rounded" src="{self.bio_data["profile_image"]}">
-                    </figure>
-                    <div class="content">
-                      <h3>{self.bio_data["name"]}</h3>
-                      <h6>{self.bio_data["chinese_name"]}</h6>
-                      <h6>{self.bio_data["work_place"]}</h6>
-                      <h6>{'/ '.join(self.bio_data["research_interests"])}</h6>
-                    </div>
-                    <!-- details -->
-                    <div class="details">
-                      <h3>EMAIL</h3>
-                      <br>
-                      <p><a href="mailto:{self.bio_data["email"]}">{self.bio_data["email"].replace('@', '[at]').replace('.', '[dot]')}</a></p>
-                    </div>
-                    <!-- social network icons -->
-                    <div class="social">
-                      <a href="{self.bio_data["github"]}" target="_blank">
-                        <span class="{self.bio_data["icons"]["github"]}" style="display:inline; text-decoration: none"></span>
-                      </a>
-                      <a href="{self.bio_data["scholar"]}" target="_blank">
-                        <span class="{self.bio_data["icons"]["scholar"]}" style="display:inline; text-decoration: none"></span>
-                      </a>
-                      <a href="{self.bio_data["linkedin"]}" target="_blank">
-                        <span class="{self.bio_data["icons"]["linkedin"]}" style="display:inline; text-decoration: none"></span>
-                      </a>
-                    </div>
-
-                    <div id="sidebar" class="menu sticky is-hidden-mobile">
-                      <p class="menu-label"><b>Quick Links</b></p>
-                      <ul class="menu-list">
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#intro">Intro</a></li>
-                        <li><a href="#research">Selected Projects</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="content">
-                    <!--News-->
-                    <h3 id="news">News</h3>
-                    <ul id="news-list">
-                      {news_items}
-                    </ul>
-
-                    <!--Intro-->
-                    <h3 id="intro">Intro</h3>
-                    <p>{self.bio_data["intro"]}</p>
-                    <p><a href="{self.bio_data["cv"]}">[CV]</a></p>
-
-                    <!--Research-->
-                    <h3 id="research">Selected Projects</h3>
-                    <div id="research-list">
-                      {research_items}
-                    </div>
-                  </div>
-                </div>
-              </div>
+<body>
+    <section class="section">
+    <div class="container">
+        <div class="columns">
+        <div class="column is-2">
+            <div class="sticky">
+            <figure class="image is-128x128">
+                <img class="is-rounded" src="{self.bio_data["profile_image"]}">
+            </figure>
+            <div class="content">
+                <h3>{self.bio_data["name"]}</h3>
+                <h6>{self.bio_data["chinese_name"]}</h6>
+                <h6>{self.bio_data["work_place"]}</h6>
+                <h6>{'/ '.join(self.bio_data["research_interests"])}</h6>
             </div>
-          </section>
+            <!-- details -->
+            <div class="details">
+                <h3>EMAIL</h3>
+                <br>
+                <p><a href="mailto:{self.bio_data["email"]}">{self.bio_data["email"].replace('@', '<br>[at]').replace('.', '[dot]')}</a></p>
+            </div>
+            <!-- social network icons -->
+            <div class="social">
+                <a href="{self.bio_data["github"]}" target="_blank">
+                <span class="{self.bio_data["icons"]["github"]}" style="display:inline; text-decoration: none"></span>
+                </a>
+                <a href="{self.bio_data["scholar"]}" target="_blank">
+                <span class="{self.bio_data["icons"]["scholar"]}" style="display:inline; text-decoration: none"></span>
+                </a>
+                <a href="{self.bio_data["linkedin"]}" target="_blank">
+                <span class="{self.bio_data["icons"]["linkedin"]}" style="display:inline; text-decoration: none"></span>
+                </a>
+            </div>
 
-          <script>
-            var elm = document.querySelector('#sidebar');
-            var ms = new MenuSpy(elm, {{
-              activeClass: 'is-active'
-            }});
-          </script>
-        </body>
+            <div id="sidebar" class="menu sticky is-hidden-mobile">
+                <p class="menu-label"><b>Quick Links</b></p>
+                <ul class="menu-list">
+                <li><a href="#news">News</a></li>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#research">Selected Projects</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+            <!--News-->
+            <h3 id="news">News</h3>
+            <ul id="news-list">
+                {news_items}
+            </ul>
 
-        </html>
+            <!--Intro-->
+            <h3 id="intro">Intro</h3>
+            <p>{self.bio_data["intro"]}</p>
+            <p><a href="{self.bio_data["cv"]}">[CV]</a></p>
+
+            <!--Research-->
+            <h3 id="research">Selected Projects</h3>
+            <div id="research-list">
+                {research_items}
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <script>
+    var elm = document.querySelector('#sidebar');
+    var ms = new MenuSpy(elm, {{
+        activeClass: 'is-active'
+    }});
+    </script>
+</body>
+
+</html>
         """
 
         return html_content
@@ -185,7 +187,7 @@ if __name__ == "__main__":
         "name": "Haoyang Li",
         "chinese_name": "李昊洋",
         "degree": "Undergraduate Student",
-        "email": "hyli1606<br>@gmail.com",
+        "email": "hyli1606@gmail.com",
         "github": "https://github.com/haoyangli16",
         "scholar": "https://scholar.google.com/citations?user=your_scholar_id&hl=en",
         "linkedin": "https://www.linkedin.com/in/your_linkedin/",
