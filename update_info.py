@@ -2,12 +2,18 @@
 bio_data = {
     "name": "Haoyang",
     "degree": "Undergraduate student",
-    "email": "your_email@gmail.com",
-    "github": "https://github.com/your_github",
+    "email": "hyli1606@gmail.com",
+    "github": "https://github.com/haoyangli16",
     "scholar": "https://scholar.google.com/citations?user=your_scholar_id&hl=en",
     "linkedin": "https://www.linkedin.com/in/your_linkedin/",
     "cv": "path_to_your_CV",
-    "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://link_to_professor_profile" target="_blank" style="text-decoration: underline;">Professor Name</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.'
+    "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank" style="text-decoration: underline;">Hao Su</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.',
+    "profile_image": "path_to_profile_image",  # New field for profile image
+    "icons": {
+        "github": "fab fa-github fa-2x",
+        "scholar": "fab fa-google fa-2x",
+        "linkedin": "fab fa-linkedin fa-2x"
+    }
 }
 
 # News Data
@@ -82,7 +88,7 @@ def generate_html(bio_data, news_data, research_data):
             <div class="column is-2">
               <div class="sticky">
                 <figure class="image is-128x128">
-                  <img class="is-rounded" src="http://hansf.me/images/sfphoto.jpg">
+                  <img class="is-rounded" src="{bio_data["profile_image"]}">
                 </figure>
                 <div class="content">
                   <h3>{bio_data["name"]}</h3>
@@ -96,13 +102,13 @@ def generate_html(bio_data, news_data, research_data):
                 <!-- social network icons -->
                 <div class="social">
                   <a href="{bio_data["github"]}" target="_blank">
-                    <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none"></span>
+                    <span class="{bio_data["icons"]["github"]}" style="display:inline; text-decoration: none"></span>
                   </a>
                   <a href="{bio_data["scholar"]}" target="_blank">
-                    <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none"></span>
+                    <span class="{bio_data["icons"]["scholar"]}" style="display:inline; text-decoration: none"></span>
                   </a>
                   <a href="{bio_data["linkedin"]}" target="_blank">
-                    <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none"></span>
+                    <span class="{bio_data["icons"]["linkedin"]}" style="display:inline; text-decoration: none"></span>
                   </a>
                 </div>
 
@@ -152,6 +158,67 @@ def generate_html(bio_data, news_data, research_data):
     '''
     
     return html_content
+
+# Function to update bio data
+def update_bio_data(field, value):
+    if field in bio_data:
+        bio_data[field] = value
+    else:
+        print(f"Field '{field}' not found in bio data.")
+
+# Function to add a project
+def add_project(year, title, authors, conference, links):
+    research_data.append({
+        "year": year,
+        "title": title,
+        "authors": authors,
+        "conference": conference,
+        "links": links
+    })
+
+# Function to update a project
+def update_project(index, field, value):
+    if 0 <= index < len(research_data):
+        if field in research_data[index]:
+            research_data[index][field] = value
+        else:
+            print(f"Field '{field}' not found in project data.")
+    else:
+        print(f"Project index '{index}' out of range.")
+
+# Function to delete a project
+def delete_project(index):
+    if 0 <= index < len(research_data):
+        del research_data[index]
+    else:
+        print(f"Project index '{index}' out of range.")
+
+# Update bio data example
+update_bio_data("profile_image", "http://hansf.me/images/sfphoto.jpg")
+update_bio_data("icons", {
+    "github": "fab fa-github fa-2x",
+    "scholar": "fab fa-google fa-2x",
+    "linkedin": "fab fa-linkedin fa-2x"
+})
+
+# Add a new project example
+add_project(
+    year=2025,
+    title="New Project Title",
+    authors="Author1, Author2, Author3",
+    conference="New Conference 2025",
+    links={
+        "project": "new_link_to_project",
+        "paper": "new_link_to_paper",
+        "code": "new_link_to_code"
+    }
+)
+
+# # Update a project example
+# update_project(0, "title", "Updated Project Title")
+
+# # Delete a project example
+# delete_project(1)
 
 # Generate the HTML content
 html_content = generate_html(bio_data, news_data, research_data)
