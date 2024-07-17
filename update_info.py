@@ -9,6 +9,8 @@ bio_data = {
     "cv": "path_to_your_CV",
     "intro": 'I am an undergraduate student student at XYZ University, advised by Prof. <a href="https://cseweb.ucsd.edu/~haosu/" target="_blank" style="text-decoration: underline;">Hao Su</a>. During my research, I have collaborated with various institutions and professionals in the field. My research interests include robotics, 3D reconstruction, and computer vision. I have worked on projects involving active mapping in unknown environments using 3D Gaussian splatting.',
     "profile_image": "path_to_profile_image",  # New field for profile image
+    "research_interests": ["Robotics","Health Care","Embodied AI"],  # New field for research interests
+    "work_place": "UC San Diego",  # New field for work place
     "icons": {
         "github": "fab fa-github fa-2x",
         "scholar": "fab fa-google fa-2x",
@@ -91,8 +93,10 @@ def generate_html(bio_data, news_data, research_data):
                   <img class="is-rounded" src="{bio_data["profile_image"]}">
                 </figure>
                 <div class="content">
-                  <h3>{bio_data["name"]}</h3>
+                  <h6>{bio_data["name"]}</h6>
                   <h6>{bio_data["degree"]}</h6>
+                  <h6>{bio_data["work_place"]}</h6>
+                  <h6>{'/ '.join(bio_data["research_interests"])}</h6>
                 </div>
                 <!-- details -->
                 <div class="details">
@@ -194,7 +198,7 @@ def delete_project(index):
         print(f"Project index '{index}' out of range.")
 
 # Update bio data example
-update_bio_data("profile_image", "images/website.JPG")
+update_bio_data("profile_image", "images/haoyang_website_square.jpg")
 update_bio_data("icons", {
     "github": "fab fa-github fa-2x",
     "scholar": "fab fa-google fa-2x",
