@@ -2047,7 +2047,7 @@ header p {
 	-ms-transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
 	transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;
 	background-color: transparent;
-	border: solid 1px #c9c9c9;
+	border: solid 1px #2f2f2f; 
 	border-radius: 4px;
 	width: 2.65em;
 	height: 2.65em;
