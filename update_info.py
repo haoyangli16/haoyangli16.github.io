@@ -18,7 +18,7 @@ class PersonalWebsiteManager:
             <article class="columns">
               <div class="column is-3">
                 <figure class="image">
-                  <img src="path_to_research_image" alt="Research Image">
+                  <img src="{research["image_path"]}" alt="Research Image">
                 </figure>
               </div>
               <div class="column">
@@ -149,7 +149,7 @@ class PersonalWebsiteManager:
         else:
             print(f"Field '{field}' not found in bio data.")
 
-    def add_project(self, year, title, authors, conference, links):
+    def add_project(self, year, title, authors, conference, links, image_path):
         self.research_data.append(
             {
                 "year": year,
@@ -157,6 +157,7 @@ class PersonalWebsiteManager:
                 "authors": authors,
                 "conference": conference,
                 "links": links,
+                "image_path": image_path,
             }
         )
 
@@ -218,7 +219,7 @@ if __name__ == "__main__":
     research_data = [
         {
             "year": 2024,
-            "title": "Active Mapping in Unknown Environments using 3D Gaussian Splatting",
+            "title": "Active 3D Gaussian Splatting in Unknown Environments",
             "authors": "Haoyang, Collaborator Name, Another Collaborator",
             "conference": "ICRA 2024",
             "links": {
@@ -226,6 +227,7 @@ if __name__ == "__main__":
                 "paper": "link_to_paper",
                 "code": "link_to_code",
             },
+            "image_path": "images/research/2016_reorder_s.png",
         }
     ]
 
@@ -253,7 +255,48 @@ if __name__ == "__main__":
             "paper": "new_link_to_paper",
             "code": "new_link_to_code",
         },
+        image_path="images/research/2017_reorder_s.png",
     )
+
+    manager.add_project(
+        year=2022,
+        title="A Portable Intelligent Robot Towards Autonomous Venipuncture",
+        authors="Haoyang Li, Another Author",
+        conference="ASME International Design Engineering Technical Conferences (IDETC) 2022",
+        links={
+            "project": "link_to_project",
+            "paper": "link_to_paper",
+            "code": "link_to_code",
+        },
+        image_path="images/research/2018_reorder_s.png",
+    )
+
+    manager.add_project(
+        year=2020,
+        title="2020 RoboMaster Robotics Competition",
+        authors="Author1, Author2",
+        conference="Host by DJI",
+        links={
+            "project": "link_to_project",
+            "paper": "link_to_paper",
+            "code": "link_to_code",
+        },
+        image_path="images/research/2019_pmvsnet_s.png",
+    )
+
+    manager.add_project(
+        year=2021,
+        title="A multi-stage robot injection device and method based on force control",
+        authors="Haoyang Li, Peng Qi",
+        conference="Patent for Invention in China",
+        links={
+            "project": "link_to_project",
+            "paper": "link_to_paper",
+            "code": "link_to_code",
+        },
+        image_path="images/research/compnet.gif",
+    )
+
 
     # Update a project example
     manager.update_project(0, "title", "Updated Project Title")
