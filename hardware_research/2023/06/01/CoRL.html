@@ -1,105 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Agile Soft Robot Arms</title>
+    <title>CIRRUS: Cryogenic Ice Removal and Reconnaissance Unmanned System for Overhead Liness</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Agile Soft Robot Arms">
+    <meta name="description" content="CIRRUS: Cryogenic Ice Removal and Reconnaissance Unmanned System for Overhead Liness">
     <link rel="stylesheet" href="/assets/css/main.css ">
     <link rel="canonical" href="hardware_research/2023/06/01/CoRL.html">
 </head>
 
-<body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <header id="header">
+<body class="bg-gray-100">
+    <div id="wrapper" class="max-w-4xl mx-auto bg-white shadow-lg">
+        <header class="bg-blue-600 text-white p-6">
             <div class="inner">
-
-                <!-- Logo -->
-                <a href="/" class="logo">
-                    <span class="symbol"> <img src="images/logo.svg" alt="" /> </span><span class="title">Rianna
-                        Jitosho</span>
-                </a>
-                <!-- Nav -->
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
-
+                <h1 class="text-3xl font-bold">Intelligent Biomimetic Robot for Power Line Maintenance</h1>
             </div>
         </header>
 
-        <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="/Publications.html">Publications</a></li>
-                <li><a href="/Resume.html">CV</a></li>
-                <li><a href="/"></a></li>
+        <nav class="bg-blue-500 p-4">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-white hover:text-gray-200">Home</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">Projects</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">Publications</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">Contact</a></li>
             </ul>
         </nav>
 
+        <main class="p-6">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+                <p class="mb-4">Our team has developed an advanced robotic solution capable of autonomously de-icing and inspecting high-voltage power lines, enhancing operational safety and efficiency in energy transmission systems. This project addresses the critical need for maintaining China's expansive energy infrastructure, particularly in challenging environmental conditions.</p>
+                <img src="prototype.png" alt="Biomimetic Robot on Power Line" class="w-full mb-4 rounded-lg shadow-md">
+                <img src="results.gif" alt="Demo of our robot" class="w-full mb-4 rounded-lg shadow-md">
+            </section>
 
-        <!-- Main -->
-        <div id="main">
-            <div class="inner">
-                <h1>Agile Soft Robot Arms</h1>
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+                <ul class="list-disc pl-6 mb-4">
+                    <li>Biomimetic design inspired by gibbon movements for agile navigation</li>
+                    <li>Advanced mechanical structure for precise de-icing operations</li>
+                    <li>AI and computer vision for real-time obstacle detection and decision-making</li>
+                    <li>IoT integration for remote monitoring and control</li>
+                </ul>
+                <img src="method.gif" alt="The whole pipeline" class="w-full mb-4 rounded-lg shadow-md">
 
-                <p>Control policies for soft robot arms typically assume quasi-static motion or require a hand-designed
-                    motion plan. In this work, we demonstrate real-time motion planning and control of agile maneuvers
-                    by soft robot arms. We use reinforcement learning and key insights with simulation and actuator
-                    modeling to overcome sim-to-real challenges, enabling zero-shot sim-to-real transfer. Shown below is
-                    an example of our framework applied to a shelf-reaching task, in which we want the tip of the soft
-                    robot arm to reach a target location on a shelf. I presented this work with my co-first author at
-                    the 2023 Conference on Robot Learning. Check out the project website <a
-                        href="https://sites.google.com/view/rl-soft-robot">here</a>.</p>
+            </section>
 
-                <div class="box alt">
-                    <div class="row uniform">
-                        <div class="6u"><span class="image fit"><img
-                                    src="images/corl/sim_gif_v2.gif" alt="" /></span></div>
-                        <div class="6u$"><span class="image fit"><img
-                                    src="images/corl/real_gif_v2.gif" alt="" /></span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <section>
-                    <h2>Follow</h2>
-                    <ul class="icons">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Development Process</h2>
+                <ol class="list-decimal pl-6 mb-4">
+                    <li>Created comprehensive 3D mechanical model</li>
+                    <li>Implemented YOLO for image segmentation and obstacle recognition</li>
+                    <li>Conducted extensive field tests to refine functionalities</li>
+                    <li>Integrated IoT capabilities for real-time data streaming</li>
+                </ol>
+            </section>
+        
 
-                        <li><a href="https://github.com/rjitosho" class="icon style2 fa-github"><span
-                                    class="label">GitHub</span></a></li>
-                        <li><a href="mailto:rjitosho@stanford.edu" class="icon style2 fa-envelope-o"><span
-                                    class="label">Email</span></a></li>
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Achievements</h2>
+                <p class="mb-4">Our project secured a prestigious award at the "Hui Le Technology Cup", demonstrating its innovation and potential impact on the industry. This recognition validates our approach and highlights the significance of our solution in addressing real-world challenges in power infrastructure maintenance.</p>
+            </section>
 
-                    </ul>
-                </section>
-                <ul class="copyright">
-                    <li>&copy; Rianna Jitosho. All rights reserved</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    <li>Jekyll integration: <a href="http://andrewbanchi.ch">Andrew Banchich</a></li>
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Future Directions</h2>
+                <p>We plan to enhance the robot's design for improved balance and obstacle navigation, incorporating additional support mechanisms and adjusting the center of gravity to optimize performance and extend operational capabilities.</p>
+            </section>
+        </main>
+
+        <footer class="bg-gray-200 p-6 mt-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 Biomimetic Robotics Lab. All rights reserved.</p>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">GitHub</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">LinkedIn</a></li>
+                    <li><a href="#" class="text-blue-600 hover:text-blue-800">Email</a></li>
                 </ul>
             </div>
         </footer>
-
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="assets/js/main.js"></script>
-
-
 </body>
-
 </html>
