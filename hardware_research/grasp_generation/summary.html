@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Grasp Generation Techniques for Robotic Manipulation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Advanced Grasp Generation Techniques for Robotic Manipulation">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="hardware_research/robotic_manipulation/grasp_generation.html">
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Robotic
+                        Manipulation</span>
+                </a>
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/Publications.html">Publications</a></li>
+                <li><a href="/Resume.html">CV</a></li>
+                <li><a href="/"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>Advanced Grasp Generation Techniques for Robotic Manipulation</h1>
+
+                <h2>Project Overview</h2>
+                <p>This project innovates in the field of robotic manipulation by developing sophisticated algorithms
+                    for grasp generation using simulations that integrate real-world physics and complex scenarios. The
+                    focus is on enhancing the accuracy and reliability of robotic grips in cluttered environments, which
+                    is crucial for tasks ranging from automated assembly in manufacturing to precise operations in
+                    surgical robotics.</p>
+                <div class="box alt">
+                    <div class="row uniform">
+                        <div class="6u"><span class="image fit"><img src="grasp_pose_ycb.png" alt="" /></span>
+                        </div>
+                        <div class="6u$"><span class="image fit"><img src="cgn_demo.png" alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Technical Highlights</h2>
+                <ol>
+                    <li><strong>Simulation Setup</strong>: Utilizes a detailed simulation environment with a Franka
+                        Gripper robot and YCB clutter objects to mimic real-world conditions closely. This setup allows
+                        for precise testing and refinement of grasp techniques.</li>
+                    <li><strong>Grasp Pose Generation</strong>: Employs advanced algorithms to dynamically generate
+                        grasp poses based on object geometry and environmental context, significantly enhancing the
+                        adaptability of the robotic system.</li>
+                    <li><strong>Multi-view Point Cloud Integration</strong>: Incorporates data from multiple cameras to
+                        create a comprehensive 3D representation of the environment, which improves the robot's
+                        understanding of its surroundings and the positioning of objects.</li>
+                    <li><strong>Antipodal Sampling</strong>: Utilizes geometric and force closure properties to
+                        determine optimal grasp points, ensuring stability and minimizing the risk of slippage.</li>
+                    <li><strong>Real-time Adjustments</strong>: Features the capability to adjust grip strategies in
+                        real-time based on feedback from environmental interactions, increasing the success rate of
+                        grasps under varying conditions.</li>
+                </ol>
+                <div class="box alt">
+                    <div class="row uniform">
+                        <div class="6u"><span class="image fit"><img src="anygrasp.png" alt="" /></span>
+                        </div>
+                        <div class="6u$"><span class="image fit"><img src="cgn.png" alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Innovations and Contributions</h2>
+                <ul>
+                    <li><strong>Robust Grasp Synthesis</strong>: Through the use of simulated environments, the project
+                        develops robust algorithms that can predict and execute effective grasps even in densely packed
+                        spaces.</li>
+                    <li><strong>Enhanced Object Recognition and Handling</strong>: Integrates advanced vision systems
+                        and sensor feedback to accurately identify and manipulate a wide range of object shapes and
+                        sizes.</li>
+                    <li><strong>Adaptive Learning Models</strong>: Incorporates machine learning techniques to
+                        continually refine grasp strategies based on past performance, which enables the robotic system
+                        to learn from its environment and improve over time.</li>
+                </ul>
+
+                <div class="box alt">
+                    <div class="row uniform">
+                        <div class="6u"><span class="image fit"><img src="sampling_example.png" alt="" /></span>
+                        </div>
+                        <div class="6u$"><span class="image fit"><img src="vis_in_sapien.png" alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Real-world Applications</h2>
+                <p>The technologies developed in this project have significant implications for several industries:</p>
+                <ul>
+                    <li><strong>Manufacturing</strong>: Robots equipped with these advanced grasping techniques can
+                        perform more complex assembly tasks with higher precision and lower error rates.</li>
+                    <li><strong>Healthcare</strong>: In surgical settings, the enhanced manipulation capabilities can
+                        lead to more delicate and safe interactions with soft tissues and small, intricate medical
+                        devices.</li>
+                    <li><strong>Logistics</strong>: Automates the packaging and handling processes, allowing for more
+                        efficient sorting, packing, and transporting of goods.</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>This project not only pushes the boundaries of robotic manipulation through innovative grasp
+                    generation techniques but also sets a new standard for the integration of robotics in practical
+                    applications. The blend of simulation-based testing and real-world application demonstrates a
+                    scalable path for robotics research that significantly enhances the capabilities of autonomous
+                    systems in complex environments.</p>
+
+                <h2>Further Research Directions</h2>
+                <p>Future work will focus on expanding the adaptability of grasp techniques to more diverse materials
+                    and environmental conditions, as well as integrating greater degrees of sensory feedback to further
+                    enhance the precision and reliability of robotic manipulations.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/haoyangli16" class="icon style2 fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                        <li><a href="mailto:hal168@ucsd.edu" class="icon style2 fa-envelope-o"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Robotic Manipulation Research. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li>Jekyll integration: <a href="http://andrewbanchi.ch">Andrew Banchich</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
