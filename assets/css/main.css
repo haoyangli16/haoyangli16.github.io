@@ -1801,7 +1801,7 @@ select,
 textarea {
 	color: #101010;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-size: 24pt;
+	font-size: 24pt;  /* 16pt */
 	font-weight: 300;
 	line-height: 1.75
 }
@@ -1832,13 +1832,13 @@ a {
 	-ms-transition: border-bottom-color .2s ease, color .2s ease;
 	transition: border-bottom-color .2s ease, color .2s ease;
 	text-decoration: none;
-	color: #585858;
-	border-bottom: dotted 1px rgba(88, 88, 88, 0.5)
+	color: #2c2c2c;  /* #585858 */
+	border-bottom: dotted 1px rgba(49, 49, 49, 0.5)
 }
 
 a:hover {
 	border-bottom-color: transparent;
-	color: #373af3 !important
+	color: #373af3 !important  /* #f2849e */
 }
 
 strong,
@@ -2062,8 +2062,8 @@ header p {
 }
 
 .icon.style2:hover {
-	color: #f2849e;
-	border-color: #f2849e
+	color:  #373af3 !important;  /* #f2849e */
+	border-color: #373af3 !important;  /* #f2849e */
 }
 
 .icon.style2:active {
@@ -2335,8 +2335,8 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-	border-bottom-color: #f2849e;
-	box-shadow: inset 0 -1px 0 0 #f2849e
+	border-bottom-color: #373af3;
+	box-shadow: inset 0 -1px 0 0 #373af3
 }
 
 .select-wrapper {
@@ -2446,8 +2446,8 @@ input[type="radio"]:checked+label:before {
 
 input[type="checkbox"]:focus+label:before,
 input[type="radio"]:focus+label:before {
-	border-color: #f2849e;
-	box-shadow: 0 0 0 1px #f2849e
+	border-color: #373af3;
+	box-shadow: 0 0 0 1px #373af3
 }
 
 input[type="checkbox"]+label:before {
@@ -2659,8 +2659,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	color: #f2849e !important;
-	box-shadow: inset 0 0 0 2px #f2849e
+	color: #373af3 !important;
+	box-shadow: inset 0 0 0 2px #373af3
 }
 
 input[type="submit"]:active,
@@ -2702,7 +2702,7 @@ input[type="reset"].special:hover,
 input[type="button"].special:hover,
 button.special:hover,
 .button.special:hover {
-	background-color: #f2849e
+	background-color: #373af3
 }
 
 input[type="submit"].special:active,
@@ -2881,7 +2881,7 @@ button:disabled,
 
 .tiles article.style1>.image:before {
 	background-image: url("https://github.com/haoyangli16/rjitosho.github.io/blob/master/images/009_main.png");
-	background-color: #f2849e
+	background-color: #373af3
 }
 
 .tiles article.style2>.image:before {
