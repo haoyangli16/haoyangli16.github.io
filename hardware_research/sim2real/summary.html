@@ -48,19 +48,27 @@
                 <h1>Sim-To-Real: From Imitation to Reinforcement and Beyond</h1>
 
                 <h2>Abstract</h2>
-                <p>This report details a comprehensive study on improving robot grasping capabilities, progressing from simple imitation learning to sophisticated reinforcement learning techniques and visual-based policies. Our experiments span various learning paradigms, input modalities, and model architectures, offering insights into the strengths and limitations of each approach.</p>
+                <p>This report details a comprehensive study on improving robot grasping capabilities, progressing from
+                    simple imitation learning to sophisticated reinforcement learning techniques and visual-based
+                    policies. Our experiments span various learning paradigms, input modalities, and model
+                    architectures, offering insights into the strengths and limitations of each approach.</p>
 
                 <h2>1. Introduction</h2>
-                <p>Robot grasping remains a fundamental challenge in robotics, requiring precise perception, planning, and control. This study aims to systematically explore and compare different learning approaches to solve this task, with a focus on sample efficiency, generalization, and real-world applicability.</p>
+                <p>Robot grasping remains a fundamental challenge in robotics, requiring precise perception, planning,
+                    and control. This study aims to systematically explore and compare different learning approaches to
+                    solve this task, with a focus on sample efficiency, generalization, and real-world applicability.
+                </p>
                 <video width="100%" max-width="800px" controls>
-                  <source src="pick_cube_sim.mp4" type="video/mp4">
+                    <source src="pick_cube_sim.mp4" type="video/mp4">
                 </video>
 
                 <h2>2. Methodology</h2>
-                <p>Our research progressed through several key stages, each building upon the insights from the previous:</p>
+                <p>Our research progressed through several key stages, each building upon the insights from the
+                    previous:</p>
 
                 <h3>2.1 Behavior Cloning with Diffusion Policies</h3>
-                <p>We began with a pure imitation learning approach, leveraging recent advances in diffusion models for behavior prediction.</p>
+                <p>We began with a pure imitation learning approach, leveraging recent advances in diffusion models for
+                    behavior prediction.</p>
 
                 <h4> (1) Experimental Setup:</h4>
                 <ul>
@@ -92,16 +100,18 @@
                 <div class="box alt">
                     <div class="row uniform">
                         <div class="6u"><span class="image fit"><video width="95%" max-width="600px" controls>
-                            <source src="test_17000.mp4" type="video/mp4">
-                          </video></span>
+                                    <source src="test_17000.mp4" type="video/mp4">
+                                </video></span>
                         </div>
-                        <div class="6u$"><span class="image fit"><img src="success_dist.png" width="80%" max-width="500px" alt="" /></span>
+                        <div class="6u$"><span class="image fit"><img src="success_dist.png" width="80%"
+                                    max-width="500px" alt="" /></span>
                         </div>
                     </div>
                 </div>
 
                 <h3>2.2 PPO with Demonstration Augmented Policy Gradient (DAPG)</h3>
-                <p>Building on the limitations of pure imitation, we explored combining reinforcement learning with demonstrations.</p>
+                <p>Building on the limitations of pure imitation, we explored combining reinforcement learning with
+                    demonstrations.</p>
 
                 <h4> (1) Experimental Setup:</h4>
                 <ul>
@@ -133,14 +143,16 @@
                 <ul>
                     <li>Dense reward led to successful grasping, but pure RL also succeeded</li>
                     <li>Sparse reward resulted in very slow learning</li>
-                    <li>RL component seemed to dominate learning, questioning the value of demonstrations in this setup</li>
+                    <li>RL component seemed to dominate learning, questioning the value of demonstrations in this setup
+                    </li>
                 </ul>
 
 
                 <h3>2.3 Residual Policy Learning</h3>
                 <p>To leverage the strengths of both BC and RL, we developed a residual policy approach.</p>
                 <div style="display: flex; justify-content: center;">
-                    <img src="residual_policy.png" alt="Overview of robot grasping research" style="width: 100%; max-width: 800px;">
+                    <img src="residual_policy.png" alt="Overview of robot grasping research"
+                        style="width: 100%; max-width: 800px;">
                 </div>
 
                 <h4>(1) Experimental Setup:</h4>
@@ -173,7 +185,8 @@
                 </div>
 
                 <h3>2.4 State-to-Visual Policy Transfer (DAgger)</h3>
-                <p>To bridge the gap between state-based and vision-based policies, we employed Dataset Aggregation (DAgger).</p>
+                <p>To bridge the gap between state-based and vision-based policies, we employed Dataset Aggregation
+                    (DAgger).</p>
 
                 <h4>(1) Experimental Setup:</h4>
                 <ul>
@@ -194,12 +207,13 @@
                     <li>Highlighted challenges in transferring state-based knowledge to visual domain</li>
                 </ul>
                 <video width="100%" max-width="600px" controls>
-                  <source src="pick_mug.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
+                    <source src="pick_mug.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
 
                 <h3>2.5 End-to-End Visual Grasping Policies</h3>
-                <p>Finally, we focused on developing end-to-end visual grasping policies, aiming for real-world applicability.</p>
+                <p>Finally, we focused on developing end-to-end visual grasping policies, aiming for real-world
+                    applicability.</p>
 
                 <h4> (1) Experimental Setup:</h4>
                 <ul>
@@ -222,31 +236,129 @@
                     <li>Careful tuning of hyperparameters proved crucial for success</li>
                 </ul>
                 <video width="50%" max-width="300px" controls>
-                  <source src="sim2real_demo_june_compress.mp4" type="video/mp4">
+                    <source src="sim2real_demo_june_compress.mp4" type="video/mp4">
                 </video>
 
                 <h2>3. Discussion</h2>
                 <p>Our systematic exploration revealed several key insights:</p>
                 <ol>
-                    <li>Pure imitation learning, while simple to implement, struggles with generalization to new scenarios.</li>
+                    <li>Pure imitation learning, while simple to implement, struggles with generalization to new
+                        scenarios.</li>
                     <li>Combining RL with demonstrations can be powerful, but careful balancing is required.</li>
-                    <li>Residual policy learning offers a promising direction, leveraging the strengths of both imitation and reinforcement learning.</li>
-                    <li>Bridging the gap between state-based and vision-based policies remains challenging, highlighting the need for better transfer learning techniques.</li>
-                    <li>End-to-end visual policies show promise for real-world applications, but require careful architecture design and hyperparameter tuning.</li>
+                    <li>Residual policy learning offers a promising direction, leveraging the strengths of both
+                        imitation and reinforcement learning.</li>
+                    <li>Bridging the gap between state-based and vision-based policies remains challenging, highlighting
+                        the need for better transfer learning techniques.</li>
+                    <li>End-to-end visual policies show promise for real-world applications, but require careful
+                        architecture design and hyperparameter tuning.</li>
                 </ol>
 
                 <h2>4. Future Work</h2>
                 <p>Based on our findings, several promising directions for future research emerge:</p>
                 <ol>
-                    <li>Exploring more sophisticated visual representations, potentially leveraging large language-vision models.</li>
+                    <li>Exploring more sophisticated visual representations, potentially leveraging large
+                        language-vision models.</li>
                     <li>Investigating multi-task and meta-learning approaches to improve generalization.</li>
                     <li>Developing more efficient exploration strategies for sparse reward settings.</li>
                     <li>Integrating tactile feedback to improve grasping precision and robustness.</li>
                 </ol>
 
                 <h2>5. Conclusion</h2>
-                <p>This study provides a comprehensive overview of various learning approaches for robot grasping, from imitation to reinforcement and beyond. By systematically exploring different techniques, we've identified promising directions and key challenges in developing robust, generalizable grasping policies. Our findings contribute to the ongoing effort to bridge the gap between simulated and real-world robotic manipulation.</p>
+                <p>This study provides a comprehensive overview of various learning approaches for robot grasping, from
+                    imitation to reinforcement and beyond. By systematically exploring different techniques, we've
+                    identified promising directions and key challenges in developing robust, generalizable grasping
+                    policies. Our findings contribute to the ongoing effort to bridge the gap between simulated and
+                    real-world robotic manipulation.</p>
             </div>
+
+            <!-- add the divider -->
+            <hr>
+
+            <h1>Bridging Gaps in Robotic Grasping: Reflections on Our Journey</h1>
+
+            <p>As I sit here, surrounded by robots and lines of code, I can't help but reflect on our recent adventures
+                in the world of robotic grasping. Our journey has been nothing short of fascinating, filled with moments
+                of frustration, surprise, and pure joy. But more than anything, it's been a journey of bridging gaps –
+                three crucial transitions that I believe will shape the future of robotics.</p>
+
+            <h2>1. From Simulation to Reality: The Unforgiving Leap</h2>
+
+            <p>Our experiments began in the comfort of simulation. Clean, predictable, and forgiving. We started with
+                behavior cloning, teaching our robots to mimic human demonstrations. It was like teaching a child to
+                draw by guiding their hand – effective, but limited.</p>
+
+            <p>As we moved to reinforcement learning techniques like PPO+DAPG, our simulated robots became more adept,
+                learning to grasp objects with increasing precision. But then came the moment of truth – the leap to the
+                real world.</p>
+
+            <p>The transition was humbling. Shadows played tricks on our vision systems. Imperfect motors didn't move
+                exactly as commanded. The real world, in all its messy glory, exposed the limitations of our simulated
+                training.</p>
+
+            <p>This gap between simulation and reality is more than just a technical challenge. It's a reminder of the
+                complexity of the world we're trying to navigate. As we push forward, I'm excited about the potential of
+                domain randomization and sim-to-real transfer techniques. Perhaps the key lies not in perfect
+                simulation, but in embracing and learning from the imperfections?</p>
+
+            <h2>2. From State to Vision: Seeing the World Anew</h2>
+
+            <p>Another significant transition in our research was moving from state-based inputs to visual perception.
+                Initially, our robots knew the exact position of every joint, every object. It was like playing chess
+                with perfect information.</p>
+
+            <p>The shift to visual inputs – first RGB, then RGB-D – was like asking our robots to play chess by looking
+                at the board, just as humans do. Our experiments with various visual encoders, from ResNet to CLIP, felt
+                like giving our robots new eyes, each with its own way of seeing the world.</p>
+
+            <p>This transition forces us to grapple with fundamental questions about perception and action. How do we
+                distill the complexity of visual information into meaningful actions? Our work with end-to-end visual
+                policies is just the beginning. I'm particularly excited about the potential of large visual-language
+                models in this space. Could we one day have robots that not only see but truly understand their
+                environment?</p>
+
+            <h2>3. From Imitation to Reinforcement: Learning to Explore</h2>
+
+            <p>Perhaps the most profound transition was from pure imitation learning to reinforcement learning, and
+                eventually to hybrid approaches like our residual policy method.</p>
+
+            <p>We started with behavior cloning – safe, predictable, but limited by the quality of demonstrations.
+                Moving to reinforcement learning was like watching our robots grow up, learning to explore and make
+                mistakes. The sparse reward experiments were particularly telling – like watching a toddler learn to
+                walk, with moments of frustration but also breakthroughs.</p>
+
+            <p>Our residual policy approach, combining a fixed behavior-cloned policy with a learned RL component, feels
+                like a metaphor for human learning. We start by imitating, then gradually learn to improvise and adapt.
+            </p>
+
+            <p>This journey from imitation to reinforcement learning reflects a deeper question in AI and robotics: How
+                do we balance the knowledge we can impart with the need for autonomous learning? As we push towards more
+                general-purpose robots, this balance will be crucial.</p>
+
+            <h2>Looking Ahead: The Gaps Yet to Bridge</h2>
+
+            <p>As I ponder these transitions – sim-to-real, state-to-visual, imitation-to-reinforcement – I'm struck by
+                how they mirror broader challenges in AI and robotics. Each represents a form of generalization, a step
+                towards more adaptable, robust systems.</p>
+
+            <p>Looking ahead, I'm excited about several possibilities:</p>
+
+            <ol>
+                <li><strong>Multimodal Learning</strong>: Combining vision, touch, and even sound for more robust
+                    grasping.</li>
+                <li><strong>Continual Learning</strong>: Developing robots that don't just learn a task but continue to
+                    improve over time.</li>
+                <li><strong>Semantic Understanding</strong>: Moving beyond pure perception to true comprehension of
+                    objects and their uses.</li>
+            </ol>
+
+            <p>Our journey in robotic grasping has been more than a series of experiments. It's been a window into the
+                fundamental challenges of creating machines that can interact with our world as fluently as we do. As we
+                continue to bridge these gaps, I'm reminded that each challenge overcome brings us one step closer to
+                robots that can truly assist and augment human capabilities in meaningful ways.</p>
+
+            <p>The gaps we're bridging in robotic grasping are, in many ways, the gaps between artificial and human
+                intelligence. It's a journey that's far from over, but one that promises to revolutionize not just
+                robotics, but our understanding of intelligence itself.</p>
         </div>
 
         <!-- Footer -->
