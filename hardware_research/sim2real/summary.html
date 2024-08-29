@@ -54,8 +54,7 @@
                 <h2>1. Introduction</h2>
                 <p>Robot grasping remains a fundamental challenge in robotics, requiring precise perception, planning, and control. This study aims to systematically explore and compare different learning approaches to solve this task, with a focus on sample efficiency, generalization, and real-world applicability.</p>
                 <video width="100%" max-width="800px" controls>
-                  <source src="pick_mug.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
+                  <source src="pick_cube_sim.mp4" type="video/mp4">
                 </video>
 
                 <h2>2. Methodology</h2>
@@ -91,7 +90,15 @@
                     <li>Achieved moderate success in simulated environments</li>
                     <li>Real-world performance was limited, highlighting the reality gap</li>
                 </ul>
-                <img src="teleoperate.png" alt="Behavior Cloning Results" style="width: 100%; max-width: 600px;">
+
+                <div class="box alt">
+                    <div class="row uniform">
+                        <div class="6u"><span class="image fit"><img src="image_cleanup.png" alt="" /></span>
+                        </div>
+                        <div class="6u$"><span class="image fit"><img src="sim_merge_image.png" alt="" /></span>
+                        </div>
+                    </div>
+                </div>
 
                 <h3>2.2 PPO with Demonstration Augmented Policy Gradient (DAPG)</h3>
                 <p>Building on the limitations of pure imitation, we explored combining reinforcement learning with demonstrations.</p>
@@ -178,7 +185,10 @@
                     <li>Training speed was slower than anticipated</li>
                     <li>Highlighted challenges in transferring state-based knowledge to visual domain</li>
                 </ul>
-                <img src="pick_cube_sim.mp4" alt="DAgger Transfer Results" style="width: 100%; max-width: 600px;">
+                <video width="100%" max-width="600px" controls>
+                  <source src="pick_mug.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
 
                 <h3>2.5 End-to-End Visual Grasping Policies</h3>
                 <p>Finally, we focused on developing end-to-end visual grasping policies, aiming for real-world applicability.</p>
@@ -204,8 +214,7 @@
                     <li>Careful tuning of hyperparameters proved crucial for success</li>
                 </ul>
                 <video width="100%" max-width="800px" controls>
-                  <source src="visual_grasping_demo.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
+                  <source src="Sim2real_zero_shot.MOV" type="video/mp4">
                 </video>
 
                 <h2>3. Discussion</h2>
