@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Grasp Generation Techniques for Robotic Manipulation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Advanced Grasp Generation Techniques for Robotic Manipulation">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="hardware_research/sim2real/summary.html">
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="symbol"><img src="/images/logo.png" alt="" /></span><span class="title">Robotic
+                        Manipulation</span>
+                </a>
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/Publications.html">Publications</a></li>
+                <li><a href="/Resume.html">CV</a></li>
+                <li><a href="/"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>Advancing Robot Grasping: From Imitation to Reinforcement and Beyond</h1>
+
+                <h2>Abstract</h2>
+                <p>This report details a comprehensive study on improving robot grasping capabilities, progressing from simple imitation learning to sophisticated reinforcement learning techniques and visual-based policies. Our experiments span various learning paradigms, input modalities, and model architectures, offering insights into the strengths and limitations of each approach.</p>
+                <img src="overview.png" alt="Overview of robot grasping research" style="width: 100%; max-width: 800px;">
+
+                <h2>1. Introduction</h2>
+                <p>Robot grasping remains a fundamental challenge in robotics, requiring precise perception, planning, and control. This study aims to systematically explore and compare different learning approaches to solve this task, with a focus on sample efficiency, generalization, and real-world applicability.</p>
+                <video width="100%" max-width="800px" controls>
+                  <source src="pick_mug.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <h2>2. Methodology</h2>
+                <p>Our research progressed through several key stages, each building upon the insights from the previous:</p>
+
+                <h3>2.1 Behavior Cloning with Diffusion Policies</h3>
+                <p>We began with a pure imitation learning approach, leveraging recent advances in diffusion models for behavior prediction.</p>
+
+                <h4>Experimental Setup:</h4>
+                <ul>
+                    <li><strong>Input Modalities:</strong> RGB images, later expanded to RGB-D</li>
+                    <li><strong>Model Architecture:</strong> Transformer-based diffusion policy</li>
+                    <li><strong>Dataset:</strong> 100 demonstrations (both simulated and real-world)</li>
+                    <li><strong>Visual Encoders:</strong> ResNet18, CLIP (both global and local features)</li>
+                </ul>
+
+                <h4>Key Explorations:</h4>
+                <ul>
+                    <li>Comparison of different visual encoders</li>
+                    <li>Impact of depth information on grasping performance</li>
+                    <li>Various action representations:
+                        <ul>
+                            <li>Sample position</li>
+                            <li>Epsilon position</li>
+                            <li>Sample delta</li>
+                            <li>Epsilon delta</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Results:</h4>
+                <ul>
+                    <li>Achieved moderate success in simulated environments</li>
+                    <li>Real-world performance was limited, highlighting the reality gap</li>
+                </ul>
+                <img src="teleoperate.png" alt="Behavior Cloning Results" style="width: 100%; max-width: 600px;">
+
+                <h3>2.2 PPO with Demonstration Augmented Policy Gradient (DAPG)</h3>
+                <p>Building on the limitations of pure imitation, we explored combining reinforcement learning with demonstrations.</p>
+
+                <h4>Experimental Setup:</h4>
+                <ul>
+                    <li><strong>Input:</strong> State-based (robot joint positions, object poses)</li>
+                    <li><strong>Model:</strong> Multi-layer perceptron (MLP) policy network</li>
+                    <li><strong>Algorithm:</strong> PPO + DAPG</li>
+                </ul>
+
+                <h4>Key Explorations:</h4>
+                <ul>
+                    <li>Reward structures:
+                        <ul>
+                            <li>Dense reward (shaped for task completion)</li>
+                            <li>Sparse reward (binary success signal)</li>
+                        </ul>
+                    </li>
+                    <li>BC weight (balancing RL and imitation objectives)</li>
+                    <li>Demonstration sources:
+                        <ul>
+                            <li>10 human demonstrations</li>
+                            <li>100 human demonstrations</li>
+                            <li>600 RL-generated demonstrations</li>
+                            <li>3000 RL-generated demonstrations</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Results:</h4>
+                <ul>
+                    <li>Dense reward led to successful grasping, but pure RL also succeeded</li>
+                    <li>Sparse reward resulted in very slow learning</li>
+                    <li>RL component seemed to dominate learning, questioning the value of demonstrations in this setup</li>
+                </ul>
+
+                <h3>2.3 Residual Policy Learning</h3>
+                <p>To leverage the strengths of both BC and RL, we developed a residual policy approach.</p>
+
+                <h4>Experimental Setup:</h4>
+                <ul>
+                    <li><strong>Base Policy:</strong> Fixed BC state-based diffusion policy</li>
+                    <li><strong>Residual Policy:</strong> State-based PPO + BC, trained with sparse reward</li>
+                    <li><strong>Combined Action:</strong> a_total = a_base + w * a_residual</li>
+                </ul>
+
+                <h4>Key Explorations:</h4>
+                <ul>
+                    <li>Residual weights (w): {0.004, 0.02, 0.1, 0.3}</li>
+                    <li>Training epochs: 400 to 2000</li>
+                    <li>Impact of residual normalization</li>
+                </ul>
+
+                <h4>Results:</h4>
+                <ul>
+                    <li>Achieved >95% success rate in simulation</li>
+                    <li>Significantly faster training compared to PPO+DAPG</li>
+                    <li>Optimal residual weight found to be task-dependent</li>
+                </ul>
+                <video width="100%" max-width="600px" controls>
+                  <source src="test_17000.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <h3>2.4 State-to-Visual Policy Transfer (DAgger)</h3>
+                <p>To bridge the gap between state-based and vision-based policies, we employed Dataset Aggregation (DAgger).</p>
+
+                <h4>Experimental Setup:</h4>
+                <ul>
+                    <li><strong>Teacher:</strong> State-based policy (trained with residual PPO + BC)</li>
+                    <li><strong>Student:</strong> Visual-based policy (CLIP local features, diffusion model)</li>
+                    <li><strong>Alternative Student:</strong> Point cloud-based policy (PointNet++ encoder)</li>
+                </ul>
+
+                <h4>Key Explorations:</h4>
+                <ul>
+                    <li>Iterative data collection and policy improvement</li>
+                    <li>Comparison of image-based vs. point cloud-based representations</li>
+                </ul>
+
+                <h4>Results:</h4>
+                <ul>
+                    <li>Training speed was slower than anticipated</li>
+                    <li>Highlighted challenges in transferring state-based knowledge to visual domain</li>
+                </ul>
+                <img src="pick_cube_sim.mp4" alt="DAgger Transfer Results" style="width: 100%; max-width: 600px;">
+
+                <h3>2.5 End-to-End Visual Grasping Policies</h3>
+                <p>Finally, we focused on developing end-to-end visual grasping policies, aiming for real-world applicability.</p>
+
+                <h4>Experimental Setup:</h4>
+                <ul>
+                    <li><strong>Input:</strong> RGB images (third-person view)</li>
+                    <li><strong>Model:</strong> Transformer-based diffusion policy</li>
+                    <li><strong>Visual Encoder:</strong> CLIP (local features)</li>
+                </ul>
+
+                <h4>Key Explorations:</h4>
+                <ul>
+                    <li>Positional encodings: learned embeddings vs. sinusoidal</li>
+                    <li>Hyperparameter tuning: learning rates, weight decay, batch sizes</li>
+                    <li>Action sampling strategies</li>
+                </ul>
+
+                <h4>Results:</h4>
+                <ul>
+                    <li>Achieved promising results in both simulation and real-world settings</li>
+                    <li>Local CLIP features outperformed global features</li>
+                    <li>Careful tuning of hyperparameters proved crucial for success</li>
+                </ul>
+                <video width="100%" max-width="800px" controls>
+                  <source src="visual_grasping_demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+                <h2>3. Discussion</h2>
+                <p>Our systematic exploration revealed several key insights:</p>
+                <ol>
+                    <li>Pure imitation learning, while simple to implement, struggles with generalization to new scenarios.</li>
+                    <li>Combining RL with demonstrations can be powerful, but careful balancing is required.</li>
+                    <li>Residual policy learning offers a promising direction, leveraging the strengths of both imitation and reinforcement learning.</li>
+                    <li>Bridging the gap between state-based and vision-based policies remains challenging, highlighting the need for better transfer learning techniques.</li>
+                    <li>End-to-end visual policies show promise for real-world applications, but require careful architecture design and hyperparameter tuning.</li>
+                </ol>
+
+                <h2>4. Future Work</h2>
+                <p>Based on our findings, several promising directions for future research emerge:</p>
+                <ol>
+                    <li>Exploring more sophisticated visual representations, potentially leveraging large language-vision models.</li>
+                    <li>Investigating multi-task and meta-learning approaches to improve generalization.</li>
+                    <li>Developing more efficient exploration strategies for sparse reward settings.</li>
+                    <li>Integrating tactile feedback to improve grasping precision and robustness.</li>
+                </ol>
+
+                <h2>5. Conclusion</h2>
+                <p>This study provides a comprehensive overview of various learning approaches for robot grasping, from imitation to reinforcement and beyond. By systematically exploring different techniques, we've identified promising directions and key challenges in developing robust, generalizable grasping policies. Our findings contribute to the ongoing effort to bridge the gap between simulated and real-world robotic manipulation.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/haoyangli16" class="icon style2 fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                        <li><a href="mailto:hal168@ucsd.edu" class="icon style2 fa-envelope-o"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Robotic Manipulation Research. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li>Jekyll integration: <a href="http://andrewbanchi.ch">Andrew Banchich</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
