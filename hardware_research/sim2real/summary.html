@@ -99,11 +99,11 @@
                 </ul>
                 <div class="box alt">
                     <div class="row uniform">
-                        <div class="6u"><span class="image fit"><video width="95%" max-width="600px" controls>
+                        <div class="8u"><span class="image fit"><video width="95%" max-width="600px" controls>
                                     <source src="test_17000.mp4" type="video/mp4">
                                 </video></span>
                         </div>
-                        <div class="6u$"><span class="image fit"><img src="success_dist.png" width="40%"
+                        <div class="4u$"><span class="image fit"><img src="success_dist.png" width="40%"
                                     max-width="400px" alt="" /></span>
                         </div>
                     </div>
@@ -269,96 +269,122 @@
                     identified promising directions and key challenges in developing robust, generalizable grasping
                     policies. Our findings contribute to the ongoing effort to bridge the gap between simulated and
                     real-world robotic manipulation.</p>
+                <!-- add the divider -->
+                <hr>
+
+                <h1>Bridging Gaps in Robotic Grasping: Reflections on Our Journey</h1>
+
+                <p>As I sit here, surrounded by robots and lines of code, I can't help but reflect on our recent
+                    adventures
+                    in the world of robotic grasping. Our journey has been nothing short of fascinating, filled with
+                    moments
+                    of frustration, surprise, and pure joy. But more than anything, it's been a journey of bridging gaps
+                    –
+                    three crucial transitions that I believe will shape the future of robotics.</p>
+
+                <h2>1. From Simulation to Reality: The Unforgiving Leap</h2>
+
+                <p>Our experiments began in the comfort of simulation. Clean, predictable, and forgiving. We started
+                    with
+                    behavior cloning, teaching our robots to mimic human demonstrations. It was like teaching a child to
+                    draw by guiding their hand – effective, but limited.</p>
+
+                <p>As we moved to reinforcement learning techniques like PPO+DAPG, our simulated robots became more
+                    adept,
+                    learning to grasp objects with increasing precision. But then came the moment of truth – the leap to
+                    the
+                    real world.</p>
+
+                <p>The transition was humbling. Shadows played tricks on our vision systems. Imperfect motors didn't
+                    move
+                    exactly as commanded. The real world, in all its messy glory, exposed the limitations of our
+                    simulated
+                    training.</p>
+
+                <p>This gap between simulation and reality is more than just a technical challenge. It's a reminder of
+                    the
+                    complexity of the world we're trying to navigate. As we push forward, I'm excited about the
+                    potential of
+                    domain randomization and sim-to-real transfer techniques. Perhaps the key lies not in perfect
+                    simulation, but in embracing and learning from the imperfections?</p>
+
+                <h2>2. From State to Vision: Seeing the World Anew</h2>
+
+                <p>Another significant transition in our research was moving from state-based inputs to visual
+                    perception.
+                    Initially, our robots knew the exact position of every joint, every object. It was like playing
+                    chess
+                    with perfect information.</p>
+
+                <p>The shift to visual inputs – first RGB, then RGB-D – was like asking our robots to play chess by
+                    looking
+                    at the board, just as humans do. Our experiments with various visual encoders, from ResNet to CLIP,
+                    felt
+                    like giving our robots new eyes, each with its own way of seeing the world.</p>
+
+                <p>This transition forces us to grapple with fundamental questions about perception and action. How do
+                    we
+                    distill the complexity of visual information into meaningful actions? Our work with end-to-end
+                    visual
+                    policies is just the beginning. I'm particularly excited about the potential of large
+                    visual-language
+                    models in this space. Could we one day have robots that not only see but truly understand their
+                    environment?</p>
+
+                <h2>3. From Imitation to Reinforcement: Learning to Explore</h2>
+
+                <p>Perhaps the most profound transition was from pure imitation learning to reinforcement learning, and
+                    eventually to hybrid approaches like our residual policy method.</p>
+
+                <p>We started with behavior cloning – safe, predictable, but limited by the quality of demonstrations.
+                    Moving to reinforcement learning was like watching our robots grow up, learning to explore and make
+                    mistakes. The sparse reward experiments were particularly telling – like watching a toddler learn to
+                    walk, with moments of frustration but also breakthroughs.</p>
+
+                <p>Our residual policy approach, combining a fixed behavior-cloned policy with a learned RL component,
+                    feels
+                    like a metaphor for human learning. We start by imitating, then gradually learn to improvise and
+                    adapt.
+                </p>
+
+                <p>This journey from imitation to reinforcement learning reflects a deeper question in AI and robotics:
+                    How
+                    do we balance the knowledge we can impart with the need for autonomous learning? As we push towards
+                    more
+                    general-purpose robots, this balance will be crucial.</p>
+
+                <h2>Looking Ahead: The Gaps Yet to Bridge</h2>
+
+                <p>As I ponder these transitions – sim-to-real, state-to-visual, imitation-to-reinforcement – I'm struck
+                    by
+                    how they mirror broader challenges in AI and robotics. Each represents a form of generalization, a
+                    step
+                    towards more adaptable, robust systems.</p>
+
+                <p>Looking ahead, I'm excited about several possibilities:</p>
+
+                <ol>
+                    <li><strong>Multimodal Learning</strong>: Combining vision, touch, and even sound for more robust
+                        grasping.</li>
+                    <li><strong>Continual Learning</strong>: Developing robots that don't just learn a task but continue
+                        to
+                        improve over time.</li>
+                    <li><strong>Semantic Understanding</strong>: Moving beyond pure perception to true comprehension of
+                        objects and their uses.</li>
+                </ol>
+
+                <p>Our journey in robotic grasping has been more than a series of experiments. It's been a window into
+                    the
+                    fundamental challenges of creating machines that can interact with our world as fluently as we do.
+                    As we
+                    continue to bridge these gaps, I'm reminded that each challenge overcome brings us one step closer
+                    to
+                    robots that can truly assist and augment human capabilities in meaningful ways.</p>
+
+                <p>The gaps we're bridging in robotic grasping are, in many ways, the gaps between artificial and human
+                    intelligence. It's a journey that's far from over, but one that promises to revolutionize not just
+                    robotics, but our understanding of intelligence itself.</p>
             </div>
-
-            <!-- add the divider -->
-            <hr>
-
-            <h1>Bridging Gaps in Robotic Grasping: Reflections on Our Journey</h1>
-
-            <p>As I sit here, surrounded by robots and lines of code, I can't help but reflect on our recent adventures
-                in the world of robotic grasping. Our journey has been nothing short of fascinating, filled with moments
-                of frustration, surprise, and pure joy. But more than anything, it's been a journey of bridging gaps –
-                three crucial transitions that I believe will shape the future of robotics.</p>
-
-            <h2>1. From Simulation to Reality: The Unforgiving Leap</h2>
-
-            <p>Our experiments began in the comfort of simulation. Clean, predictable, and forgiving. We started with
-                behavior cloning, teaching our robots to mimic human demonstrations. It was like teaching a child to
-                draw by guiding their hand – effective, but limited.</p>
-
-            <p>As we moved to reinforcement learning techniques like PPO+DAPG, our simulated robots became more adept,
-                learning to grasp objects with increasing precision. But then came the moment of truth – the leap to the
-                real world.</p>
-
-            <p>The transition was humbling. Shadows played tricks on our vision systems. Imperfect motors didn't move
-                exactly as commanded. The real world, in all its messy glory, exposed the limitations of our simulated
-                training.</p>
-
-            <p>This gap between simulation and reality is more than just a technical challenge. It's a reminder of the
-                complexity of the world we're trying to navigate. As we push forward, I'm excited about the potential of
-                domain randomization and sim-to-real transfer techniques. Perhaps the key lies not in perfect
-                simulation, but in embracing and learning from the imperfections?</p>
-
-            <h2>2. From State to Vision: Seeing the World Anew</h2>
-
-            <p>Another significant transition in our research was moving from state-based inputs to visual perception.
-                Initially, our robots knew the exact position of every joint, every object. It was like playing chess
-                with perfect information.</p>
-
-            <p>The shift to visual inputs – first RGB, then RGB-D – was like asking our robots to play chess by looking
-                at the board, just as humans do. Our experiments with various visual encoders, from ResNet to CLIP, felt
-                like giving our robots new eyes, each with its own way of seeing the world.</p>
-
-            <p>This transition forces us to grapple with fundamental questions about perception and action. How do we
-                distill the complexity of visual information into meaningful actions? Our work with end-to-end visual
-                policies is just the beginning. I'm particularly excited about the potential of large visual-language
-                models in this space. Could we one day have robots that not only see but truly understand their
-                environment?</p>
-
-            <h2>3. From Imitation to Reinforcement: Learning to Explore</h2>
-
-            <p>Perhaps the most profound transition was from pure imitation learning to reinforcement learning, and
-                eventually to hybrid approaches like our residual policy method.</p>
-
-            <p>We started with behavior cloning – safe, predictable, but limited by the quality of demonstrations.
-                Moving to reinforcement learning was like watching our robots grow up, learning to explore and make
-                mistakes. The sparse reward experiments were particularly telling – like watching a toddler learn to
-                walk, with moments of frustration but also breakthroughs.</p>
-
-            <p>Our residual policy approach, combining a fixed behavior-cloned policy with a learned RL component, feels
-                like a metaphor for human learning. We start by imitating, then gradually learn to improvise and adapt.
-            </p>
-
-            <p>This journey from imitation to reinforcement learning reflects a deeper question in AI and robotics: How
-                do we balance the knowledge we can impart with the need for autonomous learning? As we push towards more
-                general-purpose robots, this balance will be crucial.</p>
-
-            <h2>Looking Ahead: The Gaps Yet to Bridge</h2>
-
-            <p>As I ponder these transitions – sim-to-real, state-to-visual, imitation-to-reinforcement – I'm struck by
-                how they mirror broader challenges in AI and robotics. Each represents a form of generalization, a step
-                towards more adaptable, robust systems.</p>
-
-            <p>Looking ahead, I'm excited about several possibilities:</p>
-
-            <ol>
-                <li><strong>Multimodal Learning</strong>: Combining vision, touch, and even sound for more robust
-                    grasping.</li>
-                <li><strong>Continual Learning</strong>: Developing robots that don't just learn a task but continue to
-                    improve over time.</li>
-                <li><strong>Semantic Understanding</strong>: Moving beyond pure perception to true comprehension of
-                    objects and their uses.</li>
-            </ol>
-
-            <p>Our journey in robotic grasping has been more than a series of experiments. It's been a window into the
-                fundamental challenges of creating machines that can interact with our world as fluently as we do. As we
-                continue to bridge these gaps, I'm reminded that each challenge overcome brings us one step closer to
-                robots that can truly assist and augment human capabilities in meaningful ways.</p>
-
-            <p>The gaps we're bridging in robotic grasping are, in many ways, the gaps between artificial and human
-                intelligence. It's a journey that's far from over, but one that promises to revolutionize not just
-                robotics, but our understanding of intelligence itself.</p>
         </div>
 
         <!-- Footer -->
