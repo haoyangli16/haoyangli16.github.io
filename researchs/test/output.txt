@@ -1,0 +1,306 @@
+supervision . The robot  (Fig. 1 (a)), which  offers  9-DOF,  has a 
+compact  design  consisting  of a positioning  unit (Fig. 1 (b)), a 
+support  unit (Fig. 1 (c)), an information  processing  unit (Fig. 1 
+(d)), a puncturing  unit (Fig. 1 (e)) and a needle  module  (Fig. 1 
+(f)). As shown  in Fig. 2, This robot  uses a vascular  localization  
+technology  that combines  a NIR camera  and anultrasound  
+device  (st-1c transducer,  frequency  7.5MHz,  48 lateral  array  
+elements,  80 axial  array  elements,  element  spacing  0.3mm) 
+which  is placed  at the front  of the robot . In the longitudinal  
+section  of blood  vessels,  ultrasonic  images  are used to perform  
+vein segmentation  and estimation  of vein depth . The NIR 
+optical  imaging  is used to segment  the venous  distribution  in 
+the horizontal  direction .
+    The positioning  unit, with its 4-DOF,  consists  of motor  and 
+ball screw  drive  modules . Three  of them  are translations  along  
+the x, y, and z axis, while  the fourth  is rotation  along  the z axis. A Portable Robotic Device for Autonomous 
+Vascular Access
+performed  daily . The procedure  is traditionally  guided  by 
+visual  inspection  and palpation  of the peripheral  forearm  veins . 
+Once  a suitable  vein is located,  a needle  is then inserted  into 
+the center  of the vessel . Oftentimes,  however,  it is difficult  to 
+estimate  the depth  of the vein or steer the needle  if the vein 
+moves  or rolls. Poorly  introduced  needles  may then result  in 
+complications  such as increased  pain,  internal  bleeding,  or 
+extravasation . The challenges  of venipuncture  are exacerbated  
+in obese  and dark-skinned  patients  where  locating  a vein can 
+be difficult,  as well as in pediatric  and geriatric  populations  
+where  the veins  are often  small  and weak .
+    Unlike  imaging -based  methods,  which  rely on manual  
+insertion,  robotic  strategies  could  altogether  eliminate  the 
+dependence  on practitioner  experience  and availability . Here,  
+we present  a portable  venipuncture  robot  capable  of steering  
+needles  and catheters  into submilli -meter  vessels  with minimalenipuncture  is critical  to a plethora  of clinical  
+interventions  and is the most  ubiquitous  invasive  
+routine  in the U.S., with over 2.7 million  procedures V
+Fig. 1. An illustration  of the Solidworks  (CAD)  model  of  the venipuncture  robot,  with the white  color  indicating  the supporting  unit, the blue color  
+indicating  the positioning  unit,  the red color  indicating  the puncturing  unit, the purple  color  indicating  the imaging  unit, and the transparent  color  
+indicating  the needle  module .Robotic System
+Page 1 of  9Venipuncture Robot        June 2022                                             
+Haoyang Li*1, Tenghui  Xie*1, Jinghai  Pan1, Yibo  Zhao1, Zhifan  Yan1, Jinyan  Guo1,3,Yu 
+Chen1, Junbo  Ge2, Peng Qi1
+*Project Co -leads, 
+1Tongji University, 2Fudan University, 3Shanghai Tenth People's Hospital
+Fig. 2. An illustration  of the venipuncture  robot : (a) Mechatronics  design  of the robot ; (b) Workflow  of venipuncture ; (c) Vascular  localization  based  on 
+ultrasound  imaging,  specifically  in the longitudinal  direction .
+Page 2 of  9Venipuncture Robot        June 2022                                             
+Motors  1, 2, and 3 operate  jointly  to move  to the target  x-y 
+plane  obtained  by analyzing  the NIR images  using  the NIR 
+algorithm . The puncture  angle  is determined  by motor  4. At 
+the same  time,  the cantilever  mechanism  moves  down  as a 
+whole  to ensure  that the ultrasonic  equipment  touches  the skin 
+correctly  so that a clear  ultrasound  image  can be collected  and 
+used for pre-puncture  navigation . Upon  contact  with the skin,  
+it can elicit  high-quality  longitudinal  vein section  images,  the 
+ultrasonic  algorithm  then calculates  the depth  of the puncture  
+point . The puncturing  unit has 2-DOF,  is driven  by a uni-axial  
+mechanism,  and can puncture  under  the guidance  of an 
+ultrasonic  device . The movement  of the needle  along  the y-
+direction  is controlled  by motor  5 in the puncturing  unit, while  
+motor  6 advances  the needle  module  to the vein puncture  point .
+Transmission  part
+    The transmission  part of the mechanical  mechanism  is a six-
+degree -of-freedom  compact  mechanism  (Fig. 4(a)) designed  
+with a reliable  short  transmission  chain  structure,  which  
+mostly  consists  of a precision  ball screw  and Maxon  motor  
+(Fig. 4(b)).
+    Low friction  in ball screws  yields  high mechanical  
+efficiency  compared  to alternatives . A typical  ball screw  may 
+be 90 percent  efficient,  versus  20 to 25 percent  efficiency  of 
+an Acme  lead screw  of equal  size. Lack  of sliding  friction  
+between  the nut and screw  lends  itself  to an extended  lifespan  
+of the screw  assembly,  reducing  downtime  for maintenance  
+and parts  replacement,  while  also decreasing  demand  for 
+lubrication . In the meanwhile,  the key features  that set 
+Maxon’s  electronically  commutated  EC motors  apart  are their 
+excellent  torque  performance,  high power,  extremely  wide  
+speed  range,  and unrivaled  service  life. The outstanding  
+controllability  of the motors  permits  the creation  of high-
+precision  positioning  drives .
+    Consequently  thus,  the transmission  part with  the 
+advantages  of high  axial  stiffness  of ball screw,  high transmission  accuracy,  high mechanical  efficiency,  etc., 
+guarantee  the positioning  accuracy  of Needle  Module  and the 
+stability  of puncture  process . 
+3-DOF  Needle  Module
+    As shown  in Fig. 5, the 3-DOF  Needle  Module  consists  of 
+a linear  stage  driven  by a lead screw  spindle  supported  by ball 
+sliders  and a worm  drive  system .
+    The new kinematic  geometry  allows  puncture  needle  the 
+insertion  angle  to be controlled  independently  of the other   
+DOF . A worm  drive  system  (C in Fig. 5) is used to control  theFig. 3. Hardware  and software  system  architecture  design,  depicting  the process  flow from  image  acquisition,  signal  processing,  and robotic  controls .
+Fig. 4. An illustration  of the transmission  part of the venipuncture  robot : (a) 
+Transmission  design  of robot ; (b) Precision  ball screw  and Maxon  motor  
+of the robot .Mechanical Structure Design
+Page 3 of  9Venipuncture Robot        June 2022                                             
+insertion  angle  to ensure  self-locking  of the rotational  joint. 
+This prevents  free, unconstrained  motion  by the robot  when  
+electrical  power  is not being  supplied  to the system . This 
+design  is key to providing  the needle  to adjust  the insertion  
+angle  to the optimal  puncture  angle  without  increasing  the 
+device  size. Two ball screw  mechanisms(A,  and B in Fig. 5) 
+are used to push the puncture  needle  into the blood  vessel  step 
+by step according  to the position  specified  by the control  
+system . This design  can accurately  adjust  the puncture  speed  
+of the needle  during  a puncture . This design  also changes  
+dramatically  improves  the puncture  stability  and needle  tip 
+positioning  accuracy  of the robot .
+Coordinate  Transformation
+    After  obtaining  the ultrasonic  image  of the target  vein,  the 
+transformation  between  the image  frame,  the camera  frame,  
+and the world  frame  is needed  to accurately  map the puncture  
+point  coordinates  in the image  to the robot  execution  
+coordinates  (Fig. 6). The relationship  between  the pixel  unit 
+coordinates  of any point 𝑢 ,𝑣in the image  (𝛤) and its 
+corresponding  millimeter  unit coordinates  (𝑋,𝑌)satisfies  the 
+following  homogeneous  transformation  matrix  𝑇.
+    Furthermore,  from  the representation  of world  coordinate  
+system  (𝑂𝑤𝑋𝑤𝑌𝑤𝑍𝑤) in the camera  coordinate  system  (𝑂𝑥𝑦𝑧 ), 
+the relationship  between  the world  coordinate  system  
+(𝑥𝑤,𝑦𝑤,𝑧𝑤)and the camera  coordinate  system (𝑥,𝑦,𝑧)is 
+obtained :
+    In the equation  above,  𝑀𝑤 is the external  parameter  matrix  
+of camera ; [𝑛𝑥,𝑛𝑦,𝑛𝑧]𝑇 is the direction  vector  of 𝑋𝑊 in 𝑂𝑥𝑦𝑧 ; 
+[𝑜𝑥,𝑜𝑦,𝑜𝑧]𝑇 is the direction  vector  of 𝑌𝑊 in 𝑂𝑥𝑦𝑧 ; 
+[𝑎𝑥,𝑎𝑦,𝑎𝑧]𝑇 is the direction  vector  of 𝑍𝑊 in 𝑂𝑥𝑦𝑧 ;  
+[𝑝𝑥,𝑝𝑦,𝑝𝑧]𝑇 is the of f se t  vec tor  of 𝑂𝑊 in 𝑂𝑥𝑦𝑧 .Motor  Control  System
+    As depicted  in Fig. 7, the motor  control  scheme  is as 
+follows . First,  the 3-D coordinates  of the selected  target  vein 
+center  are outputted  from  the NIR and the US vein 
+segmentation  algorithm  and inputted  into the inverse  
+kinematic  equations . Here,  the joint parameters  needed  to 
+position  the needle  at the desired  location  before  the 
+cannulation  are calculated . The manipulator  can dynamically  
+steer the needle  in real-time by tracking  the injection  site and 
+vein walls  in the US image  to account  for patient  arm 
+movement,  tissue  deformation,   and vein rolling .
+    Our proposed  deep learning  network,  allows  us to 
+continuously  feedback  on the updated  desired  injection  site 
+extracted  from  the US image . In this fashion,  the US serves  as 
+image  feedback  to guide  the needle  manipulator  in a closed -
+form  control  loop. Here,  the cannula  is steered  into the vein 
+until the needle  tip reaches  the center . By tracking  the target  
+vessel  in real-time throughout  the insertion,  the device  can 
+compensate  for rolling  veins,  tissue  motion,  and the 
+viscoelastic  nature  of human  tissue . 
+    For motor  contr ol  in the 3-DOF  Needle  Module,  
+independent  Digital  Position  Controllers  (EPOS 2, Maxon
+Fig. 6. (a) Coordinate  Transformation  of the Venipuncture  Robot : the 
+numbers ; (b) The Angle  position  of the robot's  motor .
+Fig. 5. Design  of 3-DOF  puncture  needle  manipulator  with ball-screw  
+drive  and worm  drive .
+Mechanical Control Method
+Page 4 of  9Venipuncture Robot        June 2022                                             
+Motors)  for each joint were  utilized,  which  contain  both motor  
+drivers  and encoder  counters  on the same  board . We operated  
+them  using  a controller  area network  protocol  to send 32-bit 
+PWM  signals  (100-kHz switching  frequency)  to the motors .
+Near -infrared
+    We randomly  select  six NIR images  as examples  and show  
+the vein segmentation  and suitable  puncture  areas  in Fig. 8. 
+We propose  a Dual -In-Dual -Out network  with two-step 
+learning  and two-task learning  to determine  the suitable  
+puncture  area and angle  from  the NIR image  inputs . A visual
+illustration  of the proposed  network  is shown  in Fig. 9. It 
+contains  two steps  of training : first, it trains  a Single -In-
+Single -Out network  to segment  the vein from  the NIR image ; 
+second,  it inputs  both the NIR image  and vein segmentation  
+from  the first step training  into the Dual -In-Dual -Out network  
+to regress  the suitable  puncture  area and angle .Five examples  of the suitable  puncture  area regression  by the 
+four methods  are shown  in Fig. 10. We can visually  see that 
+both the Dual -In-Single -Out and Dual -In-Dual -Out network  
+can distinguish  between  the suitable  and non-suitable  puncture  
+area better  than the Single -In-Single -Out and Single -In-Dual -
+Out network,  indicating  the importance  and value  of bringing  
+the vein segmentation  into the network’s  input . For the 
+regression  of suitable  puncture  areas  and angle,  The mean  and 
+std DSC  are shown  in Table  Ⅰ and Table  Ⅱ.
+Ultrasonic
+    An illustration  of the dataset  is shown  in Fig. 11, where  
+green  boxes  illustrate  the veins,  yellow  boxes  illustrate  the 
+vein shadow  and red boxes  represent  the vessel  edges . In 
+previous  studies,  UNet , FPN,  and other  models  have shownFig. 9. An illustration  of the Dual -In-Dual -Out ResNeXt 50-Unet  network  
+structure .
+Fig. 7. Motor  position  feedback  control  and the target  injection  site is 
+updated  from  the US at 20 Hz. Plants  1–3 have different  rotational  inertias .
+Fig. 8. Six examples  of vein segmentation  and suitable  puncture  areas : 
+(top)  original  image ; (middle)  vein segmentation  ground  truth (GT) ; 
+(bottom)  suitable  puncture  area ground  truth (GT) . Red boxes  illustrate  the 
+unsuitable  puncture  areas  while  yellow  boxes  illustrate  the noises .
+ Fig. 10. An illustration  of five suitable  puncture  area regression  results : (a) 
+original  image ; (b/c/d/e)  suitable  puncture  area regression  results  of 
+Single -In-Single -Out/Single -In-Dual -Out/Dual -In-Single -Out/Dual -In-
+Dual -Out network ; (g) suitable  puncture  area GT. The red, orange,  blue,  
+and yellow  box indicates  non-suitable  puncture  areas,  including  the short  
+vein,  vein closed  to the imaging  edge of NIR camera,  vein bifurcation  and 
+largely  curved  vein respectively .
+Medical Image Segmentation
+Page 5 of  9Venipuncture Robot        June 2022                                             
+good  performance  in image  segmentation . To merge  the 
+advantages  of these  deep-learning  neural  networks,  our model  
+integrates  multiple  image  segmentation  networks . Through  
+stacking  methods  and feature  image  coding,  we propose  the 
+Integrated  Segmentation  Model  (ISM),  offering  high precision  
+for vein segmentation  from  ultrasonic  images . As shown  in 
+Fig. 12, the overall  structure  of ISM includes  two layers . The 
+first layer  is composed  of three  sub-models  (FPN,  PSPNet , and 
+UNet , numbered  as models  1, 2, and 3). The output  result  
+diagram  of the first layer  was used as the input  training  picture  
+of the second  layer . The second  layer  of the sub-model  is 
+composed  of LinkNet , which  takes  the label  picture  (GT)  of 
+the original  data set as the recognition  target .
+    As can be seen in Table  II, the proposed  ISM demonstrates  
+its superiority  over traditional  models  in terms  of the three  
+indicators,  namely  Dice-Similarity -Coefficient  (DSC),  
+Hausdorff -Distance  (HD95) and Intersection -Over -Union  
+(IOU) . The ISM model  achieved  significant  improvements  in 
+multiple  indicators : its DSC  value  increased  by about  6 %, 
+reaching  94.62 %, and the IOU value  increased  by about  11%, 
+in complex  samples . Finally,  a clear  puncture  point  is 
+calculated  through  the connection  domain  algorithm . 
+Experimentally,  the success  rate of selecting  the suitable  vein 
+for puncture  is 99.21%.Fig. 11. Eight  examples  of ultrasonic  angiography  (top)  with their 
+corresponding  ground  truth (GT)  labelled  pictures  of best puncture  area 
+(bottom) : green  boxes  illustrate  the veins ; yellow  boxes  illustrate  the vein 
+shadows ; red boxes  illustrate  the vessel  edges ; binary  graphs  illustrate  the 
+vein region .Fig. 12. The General Structure of ISM
+TABLE  Ⅰ: The mean  and std DSC  (in percentage)  of vein segmentation  achieved  by Single -In-Single -Out network,  and that of suitable  puncture  area 
+regression  achieved  by Single -In-Single -Out, Single -In-Dual -Out, Dual -In-Single -Out, and Dual -In-Dual -Out network .
+TABLE  Ⅱ: The mean  and std DSC  (in percentage)  of vein segmentation  achieved  by Single -In-Single -Out network,  and that of suitable  puncture  area 
+regression  achieved  by Single -In-Single -Out, Single -In-Dual -Out, Dual -In-Single -Out, and Dual -In-Dual -Out network .
+Fig. 13. Vein  segmentation  results  of different  models : FPN,  Unet , 
+PSPNet , ISM; GT illustrates  the label  picture  for the dataset .
+Page 6 of  9Venipuncture Robot        June 2022                                             
+TABLE Ⅲ: DSC and HD95 metrics of the proposed ISM model and others traditional segmentation models
+TABLE Ⅳ: Actual veinpuncture  results of different models.Fig. 14. Training  procedure  of the FPN,  UNet , PSPNet  and ISM: (a) Dice Loss curve  of FPN,  UNet , PSPNet , ISM. (b) ROC -AUC  curve  of FPN,  UNet , 
+PSPNet , ISM of testing  picture . (c) The DSC  curve  of vein segmentation  results  using  different  models : FPN,  UNet , PSPNet , LinkNet , ISM.
+Page 7 of  9Venipuncture Robot        June 2022                                             
+To make  the robot  more  reasonable,  we adopt  the most  
+relaxed  lancing  posture  of human  limbs  (adult  standard)  
+through  ergonomic  measurement  and calculation(Fig .15).
+    The portable  Venipuncture  Robot  we invented  has a size of 
+0.376*0.253*0.298 𝑚3, which  greatly  reduces  the volume  
+compared  with similar  robots  in 1*1*1.5 𝑚3. At the same  time,  
+using  POM  mixed  materials,  the mass  of our robot  is in the 
+range  of 6kg, about  15% of similar  robots,  making  it more  
+portable .Fig. 15. Design dimensions and usage scenarios
+To validate  the assembly  accuracy  and stability  of the 
+automatic  venipuncture  robot,  we carried  out experiments  
+multiple  times  to test its positioning  error . Different  sizes  of 
+circles  on the printed  paper  were  used to simulate  blood  
+vessels  of different  sizes  (with  diameters  ranging  from  3-5mm). 
+The center  of the circle  was set as the puncture  target  point,  
+and the distance  from  the center  of the puncture  point  was 
+taken  as the measurement  standard  of puncture  accuracy . We 
+use a marker  instead  of a needle  to mark  puncture  points  on 
+paper . The simulated  puncture  results  are shown  in Fig. 16 (a) 
+(marked  points  in the red circle) . After  10 groups  of tests,  we 
+collected  and analyzed  the data, the result  is shown  in Fig. 16 
+(b).
+    It was determined  that the maximum  puncture  error  of the 
+puncture  robot  was 1.79mm and the minimum  error  was 
+0.91mm. At the same  time,  according  to the principle  that if 
+the final point’s  position  drawn  by the pencil  falls within  the 
+radius,  it is recognized  as a successful  puncture,  otherwise,  it 
+fails,  the success  rate of the test was 98.24%.Of course,  it is more  valuable  for the specific  populations,  
+such as elder  people,  infants,  or people  with shock  state. For 
+instance,  some  elderly  patients  need long-term puncture,  thus 
+may causing  hematoma,  phlebitis,  artery  or nerve  damage  due 
+to repeated  puncture,  and the robot  can find more  puncture  
+sites and perform  more  precise  puncture,  which  can effectively  
+reduce  the pain of patients .
+    The robot  can not only  walk  into the hospital,  the 
+community,  but also walk  into the home,  applied  in the 
+laboratory . Because  of its high degree  of automation,  simple  
+and easy to operate,  operators  do not need  professional  
+medical  knowledge,  it can be convenient  to provide  puncture  
+services . At the same  time,  it has obvious  advantages  inErgonomic Design
+Puncture Experiment
+Page 8 of  9
+Application and Prospect
+Through  mathematical  modeling  and the puncture  
+experiments,  the venipuncture  robot  can effectively  relieve  the 
+working  pressure  of medical  staff,  and at the same  time,  
+reduce  the risk of cross -infection  among  medical  staff in the 
+context  of the COVID -19 pandemic .
+    
+Fig. 17. A team  of doctors,  nurses  and physiotherapists  take care of 
+critical  patients  with COVID -19 in the ICU of the Vila Nova  
+Cachoeirinha  hospital,  north  of São Paulo .Fig. 16. Evaluation  of positioning  error of the robot : (a) testing  paper  with
+simulated  blood  vessel  (diameter : 3mm-5mm) and the simulated  puncture
+point  marked  with red circles  (b) positioning  error distribution  diagram
+under  different  blood  vessel  diameters  (3mm-5mm).
+Fig. 18. Hospital beds per 1000 people in 2020Venipuncture Robot        June 2022                                             
+controlling  variables,  improving  efficiency,  which  can 
+accelerate  the experimental  progress .Fig. 19. The clinic staff are attending to the old man
+We would  like to thank  the medical  staff and the workshop  
+workers  for their hard work  and suggestions . Research  
+reported  in this publication  was supported  by the Innovation  
+and Entrepreneurship  Program . Meanwhile,  we acknowledge  
+additional  support  from  School  of Electronic  and Information  
+Engineering,  College  of Mechanical  Engineering  and the 
+hospitals  that we cooperate  with.
+Acknowledgement
+Page 9 of  9Fig. 20. Mice were subjected to general anesthesia by intraperitoneal 
+injection in the laboratory.
+Fig. 19. A nurse prepares to take a blood sample from a vein in a little 
+girl‘s arm.Venipuncture Robot        June 2022                                             
