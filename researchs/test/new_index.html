@@ -203,171 +203,172 @@
                   <p style="text-align:center">3-DOF Needle Module</p>
                 </div>
               </div>
-              <p>
-                This design allows for accurate adjustment of puncture speed and dramatically improves puncture
-                stabilityand needle tip positioning accuracy.
-              </p>
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-fullwidth">
-                  <img src="./images/prototype.png" alt="Prototype" class="image is-4by3">
-                  <p style="text-align:center">Prototype</p>
-                </div>
-                <div class="column is-fullwidth">
-                  <img src="./images/Vein_puncture.png" alt="Vein Puncture" class="image is-4by3">
-                  <p style="text-align:center">Vein Puncture</p>
-                </div>
-              </div>
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-fullwidth">
-                  <img src="./images/product_design_1.png" alt="Product Design 1" class="image is-4by3">
-                  <p style="text-align:center">Product Design 1</p>
-                </div>
-                <div class="column is-fullwidth">
-                  <img src="./images/product_design_2.png" alt="Product Design 2" class="image is-4by3">
-                  <p style="text-align:center">Product Design 2</p>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <h2 class="title is-3">Vein Detection</h2>
-          <div class="content has-text-justified">
-            <h3 class="title is-4">Near Infrared Imaging</h3>
             <p>
-              The robot employs Near Infrared (NIR) imaging technology for accurate vein detection. This non-invasive
-              method allows for clear visualization of superficial veins, enhancing the robot's ability to identify
-              suitable puncture sites.
+              This design allows for accurate adjustment of puncture speed and dramatically improves puncture
+              stabilityand needle tip positioning accuracy.
             </p>
             <div class="columns is-centered has-text-centered">
               <div class="column is-fullwidth">
-                <img src="./images/mixer_unet.png" alt="NIR Method - Mixer U-Net" class="image is-4by3">
-                <p style="text-align:center">NIR Method - Mixer U-Net</p>
+                <img src="./images/prototype.png" alt="Prototype" class="image is-4by3">
+                <p style="text-align:center">Prototype</p>
               </div>
               <div class="column is-fullwidth">
-                <img src="./images/dual_in_dual_out.png" alt="NIR Method - Dual-In-Dual-Out" class="image is-4by3">
-                <p style="text-align:center">NIR Method - Dual-In-Dual-Out</p>
+                <img src="./images/Vein_puncture.png" alt="Vein Puncture" class="image is-4by3">
+                <p style="text-align:center">Vein Puncture</p>
               </div>
             </div>
-            <p>
-              We randomly select six NIR images as examples and show the vein segmentation and suitable puncture areas
-              in Fig. 8. We propose a Dual-In-Dual-Out network with two-step learning and two-task learning to
-              determine the suitable puncture area and angle from the NIR image inputs. A visual illustration of the
-              proposed
-              network is shown in Fig. 9. It contains two steps of training: first, it trains a Single-In-Single-Out
-              network to segment the vein from the NIR image; second, it inputs both the NIR image and vein
-              segmentation from the first step training into the Dual-In-Dual-Out network to regress the suitable
-              puncture area and
-              angle.
-            </p>
-
-            <p>
-              NIR results:
-            </p>
             <div class="columns is-centered has-text-centered">
               <div class="column is-fullwidth">
-                <img src="./images/near_infrared_results.png" alt="NIR Results" class="image is-4by3">
+                <img src="./images/product_design_1.png" alt="Product Design 1" class="image is-4by3">
+                <p style="text-align:center">Product Design 1</p>
               </div>
               <div class="column is-fullwidth">
-                <img src="./images/infra.gif" alt="NIR Animation" class="image is-4by3">
-              </div>
-            </div>
-            <p>
-              Five examples of the suitable puncture area regression by the four methods are shown in Fig. 10. We can
-              visually see that both the Dual-In-Single-Out and Dual-In-Dual-Out network can distinguish between the
-              suitable and non-suitable puncture area better than the Single-In-Single-Out and Single-In-Dual-Out
-              network, indicating the importance and value of bringing the vein segmentation into the network's input.
-              For the regression of suitable puncture areas and angle, the mean and std DSC are shown in Table Ⅰ and
-              Table Ⅱ.
-            </p>
-
-            <h3 class="title is-4">Ultrasound Imaging</h3>
-            <p>
-              Complementing the NIR system, ultrasound technology is used for precise depth estimation and
-              longitudinal
-              vein imaging. The ultrasound device (st-1c transducer, frequency 7.5MHz) provides high-resolution images
-              of vein cross-sections, enabling accurate calculation of puncture depth.
-            </p>
-            <div class="column is-fullwidth">
-              <img src="./images/ISM.png" alt="Ultrasound Method - ISM" class="image is-4by3">
-              <p style="text-align:center">Integrated Segmentation Model (ISM)</p>
-            </div>
-            <p>
-              An illustration of the dataset is shown in Fig. 11, where green boxes illustrate the veins, yellow boxes
-              illustrate the vein shadow and red boxes represent the vessel edges. In previous studies, UNet, FPN, and
-              other models have shown good performance in image segmentation. To merge the advantages of these
-              deep-learning neural networks, our model integrates multiple image segmentation networks. Through
-              stacking
-              methods and feature image coding, we propose the Integrated Segmentation Model (ISM), offering high
-              precision for vein segmentation from ultrasonic images. As shown in Fig. 12, the overall structure of
-              ISM
-              includes two layers. The first layer is composed of three sub-models (FPN, PSPNet, and UNet, numbered as
-              models 1, 2, and 3). The output result diagram of the first layer was used as the input training picture
-              of the second layer. The second layer of the sub-model is composed of LinkNet, which takes the label
-              picture (GT) of the original data set as the recognition target.
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-fullwidth">
-                <img src="./images/untra_results.png" alt="Ultrasound Results" class="image is-4by3">
-              </div>
-              <div class="column is-fullwidth">
-                <img src="./images/ultra.gif" alt="Ultrasound Animation" class="image is-4by3">
+                <img src="./images/product_design_2.png" alt="Product Design 2" class="image is-4by3">
+                <p style="text-align:center">Product Design 2</p>
               </div>
             </div>
           </div>
-          </p>
-
-          <p>
-            As can be seen in Table II, the proposed ISM demonstrates its superiority over traditional models in
-            terms
-            of the three indicators, namely Dice-Similarity-Coefficient (DSC), Hausdorff-Distance (HD95) and
-            Intersection-Over-Union (IOU). The ISM model achieved significant improvements in multiple indicators:
-            its
-            DSC value increased by about 6 %, reaching 94.62 %, and the IOU value increased by about 11%, in complex
-            samples. Finally, a clear puncture point is calculated through the connection domain algorithm.
-            Experimentally, the success rate of selecting the suitable vein for puncture is 99.21%.
-          </p>
-          <p>
-            Training procedure of the FPN, UNet, PSPNet and ISM: (a) Dice Loss curve of FPN, UNet, PSPNet, ISM. (b)
-            ROC-AUC curve of FPN, UNet, PSPNet, ISM of testing picture. (c) The DSC curve of vein segmentation
-            results
-            using different models: FPN, UNet, PSPNet, LinkNet, ISM.
-          <div class="column is-fullwidth">
-            <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
-            <p style="text-align:center">Experimental Results</p>
-          </div>
-          </p>
-
-          <!-- Example section where the GIF is replaced with MP4 -->
-          <div class="columns is-centered">
-            <div class="column is-fullwidth">
-              <video controls class="image is-4by3">
-                <source src="./images/show.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
-
-          <h2 class="title is-3">Control System</h2>
-          <div class="content has-text-justified">
-            <p>
-              The robot's control system integrates data from both NIR and ultrasound imaging to guide the needle with
-              high precision. Advanced algorithms process the imaging data in real-time, determining the optimal
-              puncture site, angle, and depth.
-            </p>
-            <p>
-              The system allows for dynamic adjustment during the procedure, compensating for any patient movement or
-              vein deformation. This ensures a high success rate and minimizes the risk of complications.
-            </p>
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-fullwidth">
-                <img src="./images/control.png" alt="Control System" class="image is-4by3">
-                <p style="text-align:center">Control System</p>
-              </div>
-            </div>
-          </div>
-
         </div>
+
+        <h2 class="title is-3">Vein Detection</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Near Infrared Imaging</h3>
+          <p>
+            The robot employs Near Infrared (NIR) imaging technology for accurate vein detection. This non-invasive
+            method allows for clear visualization of superficial veins, enhancing the robot's ability to identify
+            suitable puncture sites.
+          </p>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/mixer_unet.png" alt="NIR Method - Mixer U-Net" class="image is-4by3">
+              <p style="text-align:center">NIR Method - Mixer U-Net</p>
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/dual_in_dual_out.png" alt="NIR Method - Dual-In-Dual-Out" class="image is-4by3">
+              <p style="text-align:center">NIR Method - Dual-In-Dual-Out</p>
+            </div>
+          </div>
+          <p>
+            We randomly select six NIR images as examples and show the vein segmentation and suitable puncture areas
+            in Fig. 8. We propose a Dual-In-Dual-Out network with two-step learning and two-task learning to
+            determine the suitable puncture area and angle from the NIR image inputs. A visual illustration of the
+            proposed
+            network is shown in Fig. 9. It contains two steps of training: first, it trains a Single-In-Single-Out
+            network to segment the vein from the NIR image; second, it inputs both the NIR image and vein
+            segmentation from the first step training into the Dual-In-Dual-Out network to regress the suitable
+            puncture area and
+            angle.
+          </p>
+
+          <p>
+            NIR results:
+          </p>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/near_infrared_results.png" alt="NIR Results" class="image is-4by3">
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/infra.gif" alt="NIR Animation" class="image is-4by3">
+            </div>
+          </div>
+          <p>
+            Five examples of the suitable puncture area regression by the four methods are shown in Fig. 10. We can
+            visually see that both the Dual-In-Single-Out and Dual-In-Dual-Out network can distinguish between the
+            suitable and non-suitable puncture area better than the Single-In-Single-Out and Single-In-Dual-Out
+            network, indicating the importance and value of bringing the vein segmentation into the network's input.
+            For the regression of suitable puncture areas and angle, the mean and std DSC are shown in Table Ⅰ and
+            Table Ⅱ.
+          </p>
+
+          <h3 class="title is-4">Ultrasound Imaging</h3>
+          <p>
+            Complementing the NIR system, ultrasound technology is used for precise depth estimation and
+            longitudinal
+            vein imaging. The ultrasound device (st-1c transducer, frequency 7.5MHz) provides high-resolution images
+            of vein cross-sections, enabling accurate calculation of puncture depth.
+          </p>
+          <div class="column is-fullwidth">
+            <img src="./images/ISM.png" alt="Ultrasound Method - ISM" class="image is-4by3">
+            <p style="text-align:center">Integrated Segmentation Model (ISM)</p>
+          </div>
+          <p>
+            An illustration of the dataset is shown in Fig. 11, where green boxes illustrate the veins, yellow boxes
+            illustrate the vein shadow and red boxes represent the vessel edges. In previous studies, UNet, FPN, and
+            other models have shown good performance in image segmentation. To merge the advantages of these
+            deep-learning neural networks, our model integrates multiple image segmentation networks. Through
+            stacking
+            methods and feature image coding, we propose the Integrated Segmentation Model (ISM), offering high
+            precision for vein segmentation from ultrasonic images. As shown in Fig. 12, the overall structure of
+            ISM
+            includes two layers. The first layer is composed of three sub-models (FPN, PSPNet, and UNet, numbered as
+            models 1, 2, and 3). The output result diagram of the first layer was used as the input training picture
+            of the second layer. The second layer of the sub-model is composed of LinkNet, which takes the label
+            picture (GT) of the original data set as the recognition target.
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/untra_results.png" alt="Ultrasound Results" class="image is-4by3">
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/ultra.gif" alt="Ultrasound Animation" class="image is-4by3">
+            </div>
+          </div>
+        </div>
+        </p>
+
+        <p>
+          As can be seen in Table II, the proposed ISM demonstrates its superiority over traditional models in
+          terms
+          of the three indicators, namely Dice-Similarity-Coefficient (DSC), Hausdorff-Distance (HD95) and
+          Intersection-Over-Union (IOU). The ISM model achieved significant improvements in multiple indicators:
+          its
+          DSC value increased by about 6 %, reaching 94.62 %, and the IOU value increased by about 11%, in complex
+          samples. Finally, a clear puncture point is calculated through the connection domain algorithm.
+          Experimentally, the success rate of selecting the suitable vein for puncture is 99.21%.
+        </p>
+        <p>
+          Training procedure of the FPN, UNet, PSPNet and ISM: (a) Dice Loss curve of FPN, UNet, PSPNet, ISM. (b)
+          ROC-AUC curve of FPN, UNet, PSPNet, ISM of testing picture. (c) The DSC curve of vein segmentation
+          results
+          using different models: FPN, UNet, PSPNet, LinkNet, ISM.
+        <div class="column is-fullwidth">
+          <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
+          <p style="text-align:center">Experimental Results</p>
+        </div>
+        </p>
+
+        <!-- Example section where the GIF is replaced with MP4 -->
+        <div class="columns is-centered">
+          <div class="column is-fullwidth">
+            <video controls class="image is-4by3">
+              <source src="./images/show.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+
+        <h2 class="title is-3">Control System</h2>
+        <div class="content has-text-justified">
+          <p>
+            The robot's control system integrates data from both NIR and ultrasound imaging to guide the needle with
+            high precision. Advanced algorithms process the imaging data in real-time, determining the optimal
+            puncture site, angle, and depth.
+          </p>
+          <p>
+            The system allows for dynamic adjustment during the procedure, compensating for any patient movement or
+            vein deformation. This ensures a high success rate and minimizes the risk of complications.
+          </p>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/control.png" alt="Control System" class="image is-4by3">
+              <p style="text-align:center">Control System</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </div>
     </div>
   </section>
 
