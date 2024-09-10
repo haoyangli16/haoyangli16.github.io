@@ -149,7 +149,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/shorts/odrfXRo9vHo" frameborder="0" allow="autoplay; encrypted-media"
+            <iframe src="https://youtube.com/shorts/7bNZi72nQfc" frameborder="0" allow="autoplay; encrypted-media"
               allowfullscreen></iframe>
           </div>
         </div>
@@ -286,15 +286,16 @@
               models 1, 2, and 3). The output result diagram of the first layer was used as the input training picture
               of the second layer. The second layer of the sub-model is composed of LinkNet, which takes the label
               picture (GT) of the original data set as the recognition target.
+              <div class="columns">
+                <div class="column">
+                  <img src="./images/untra_results.png" alt="Ultrasound Results" class="image is-4by3">
+                </div>
+                <div class="column">
+                  <img src="./images/ultra.gif" alt="Ultrasound Animation" class="image is-4by3">
+                </div>
+              </div>
             </p>
-            <div class="columns">
-              <div class="column">
-                <img src="./images/untra_results.png" alt="Ultrasound Results" class="image is-4by3">
-              </div>
-              <div class="column">
-                <img src="./images/ultra.gif" alt="Ultrasound Animation" class="image is-4by3">
-              </div>
-            </div>
+
             <p>
               As can be seen in Table II, the proposed ISM demonstrates its superiority over traditional models in terms
               of the three indicators, namely Dice-Similarity-Coefficient (DSC), Hausdorff-Distance (HD95) and
@@ -307,11 +308,12 @@
               Training procedure of the FPN, UNet, PSPNet and ISM: (a) Dice Loss curve of FPN, UNet, PSPNet, ISM. (b)
               ROC-AUC curve of FPN, UNet, PSPNet, ISM of testing picture. (c) The DSC curve of vein segmentation results
               using different models: FPN, UNet, PSPNet, LinkNet, ISM.
+              <div class="columns is-3 has-text-centered">
+                <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
+                <p class="is-bold">Experimental Results</p>
+              </div>
             </p>
-            <div class="columns is-3 has-text-centered">
-              <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
-              <p class="is-bold">Experimental Results</p>
-            </div>
+
           </div>
         </div>
       </div>
