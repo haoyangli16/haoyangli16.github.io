@@ -120,10 +120,11 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
+  <section class="hero">
+    <div class="hero-body">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="container is-max-widescreen">
+
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
@@ -142,25 +143,16 @@
               workload on medical staff, and minimize the risk of complications in venipuncture procedures.
             </p>
           </div>
-        </div>
-      </div>
 
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src="https://youtube.com/shorts/7bNZi72nQfc" frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen></iframe>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Video</h2>
+              <div class="publication-video">
+                <iframe src="https://youtube.com/shorts/7bNZi72nQfc" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
-        <div class="container is-max-widescreen">
 
           <h2 class="title is-3">Robot Design</h2>
           <div class="content has-text-justified">
@@ -178,67 +170,74 @@
               <li>Motor 5 controls needle movement along the y-direction</li>
               <li>Motor 6 advances the needle to the vein puncture point</li>
             </ul>
-            <div class="column is-fullwidth">
-              <img src="./images/design_cad.png" class="interpolation-image" alt="Motor System Design" />
-              <p style="text-align:center">Motor System Design</p>
-            </div>
-            <p>
-              A key feature is the 3-DOF Needle Module, which includes:
-            </p>
-            <ul>
-              <li>A linear stage driven by a lead screw spindle</li>
-              <li>A worm drive system for independent insertion angle control</li>
-              <li>A self-locking rotational joint for safety</li>
-              <li>Two ball screw mechanisms for precise needle movement</li>
-            </ul>
+          </div>
 
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-fullwidth">
-                <!-- <video id="teaser" autoplay muted loop height="100%" width="100%">
+          <div class="column is-fullwidth">
+            <img src="./images/design_cad.png" class="interpolation-image" alt="Motor System Design" />
+            <p style="text-align:center">Motor System Design</p>
+          </div>
+
+          <p>
+            A key feature is the 3-DOF Needle Module, which includes:
+          </p>
+
+          <ul>
+            <li>A linear stage driven by a lead screw spindle</li>
+            <li>A worm drive system for independent insertion angle control</li>
+            <li>A self-locking rotational joint for safety</li>
+            <li>Two ball screw mechanisms for precise needle movement</li>
+          </ul>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <!-- <video id="teaser" autoplay muted loop height="100%" width="100%">
                 <source src="media/videos/method.mp4"
                         type="video/mp4">
               </video> -->
-                <div class="column is-fullwidth">
-                  <img src="./images/puncture_unit.png" class="interpolation-image" alt="3-DOF Needle Module" />
-                  <p style="text-align:center">3-DOF Needle Module</p>
-                </div>
-              </div>
             </div>
-            <p>
-              This design allows for accurate adjustment of puncture speed and dramatically improves puncture
-              stabilityand needle tip positioning accuracy.
-            </p>
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-fullwidth">
-                <img src="./images/prototype.png" alt="Prototype" class="image is-4by3">
-                <p style="text-align:center">Prototype</p>
-              </div>
-              <div class="column is-fullwidth">
-                <img src="./images/Vein_puncture.png" alt="Vein Puncture" class="image is-4by3">
-                <p style="text-align:center">Vein Puncture</p>
-              </div>
-            </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-fullwidth">
-                <img src="./images/product_design_1.png" alt="Product Design 1" class="image is-4by3">
-                <p style="text-align:center">Product Design 1</p>
-              </div>
-              <div class="column is-fullwidth">
-                <img src="./images/product_design_2.png" alt="Product Design 2" class="image is-4by3">
-                <p style="text-align:center">Product Design 2</p>
-              </div>
+            <div class="column is-fullwidth">
+              <img src="./images/puncture_unit.png" class="interpolation-image" alt="3-DOF Needle Module" />
+              <p style="text-align:center">3-DOF Needle Module</p>
             </div>
           </div>
-        </div>
 
-        <h2 class="title is-3">Vein Detection</h2>
-        <div class="content has-text-justified">
-          <h3 class="title is-4">Near Infrared Imaging</h3>
           <p>
-            The robot employs Near Infrared (NIR) imaging technology for accurate vein detection. This non-invasive
-            method allows for clear visualization of superficial veins, enhancing the robot's ability to identify
-            suitable puncture sites.
+            This design allows for accurate adjustment of puncture speed and dramatically improves puncture
+            stabilityand needle tip positioning accuracy.
           </p>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/prototype.png" alt="Prototype" class="image is-4by3">
+              <p style="text-align:center">Prototype</p>
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/Vein_puncture.png" alt="Vein Puncture" class="image is-4by3">
+              <p style="text-align:center">Vein Puncture</p>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <img src="./images/product_design_1.png" alt="Product Design 1" class="image is-4by3">
+              <p style="text-align:center">Product Design 1</p>
+            </div>
+            <div class="column is-fullwidth">
+              <img src="./images/product_design_2.png" alt="Product Design 2" class="image is-4by3">
+              <p style="text-align:center">Product Design 2</p>
+            </div>
+          </div>
+
+          <h2 class="title is-3">Vein Detection</h2>
+          <div class="content has-text-justified">
+            <h3 class="title is-4">Near Infrared Imaging</h3>
+            <p>
+              The robot employs Near Infrared (NIR) imaging technology for accurate vein detection. This non-invasive
+              method allows for clear visualization of superficial veins, enhancing the robot's ability to identify
+              suitable puncture sites.
+            </p>
+          </div>
+
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
               <img src="./images/mixer_unet.png" alt="NIR Method - Mixer U-Net" class="image is-4by3">
@@ -249,6 +248,7 @@
               <p style="text-align:center">NIR Method - Dual-In-Dual-Out</p>
             </div>
           </div>
+
           <p>
             We randomly select six NIR images as examples and show the vein segmentation and suitable puncture areas
             in Fig. 8. We propose a Dual-In-Dual-Out network with two-step learning and two-task learning to
@@ -264,6 +264,7 @@
           <p>
             NIR results:
           </p>
+
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
               <img src="./images/near_infrared_results.png" alt="NIR Results" class="image is-4by3">
@@ -272,6 +273,7 @@
               <img src="./images/infra.gif" alt="NIR Animation" class="image is-4by3">
             </div>
           </div>
+
           <p>
             Five examples of the suitable puncture area regression by the four methods are shown in Fig. 10. We can
             visually see that both the Dual-In-Single-Out and Dual-In-Dual-Out network can distinguish between the
@@ -288,10 +290,12 @@
             vein imaging. The ultrasound device (st-1c transducer, frequency 7.5MHz) provides high-resolution images
             of vein cross-sections, enabling accurate calculation of puncture depth.
           </p>
+
           <div class="column is-fullwidth">
             <img src="./images/ISM.png" alt="Ultrasound Method - ISM" class="image is-4by3">
             <p style="text-align:center">Integrated Segmentation Model (ISM)</p>
           </div>
+
           <p>
             An illustration of the dataset is shown in Fig. 11, where green boxes illustrate the veins, yellow boxes
             illustrate the vein shadow and red boxes represent the vessel edges. In previous studies, UNet, FPN, and
@@ -305,6 +309,8 @@
             models 1, 2, and 3). The output result diagram of the first layer was used as the input training picture
             of the second layer. The second layer of the sub-model is composed of LinkNet, which takes the label
             picture (GT) of the original data set as the recognition target.
+          </p>
+
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
               <img src="./images/untra_results.png" alt="Ultrasound Results" class="image is-4by3">
@@ -313,62 +319,62 @@
               <img src="./images/ultra.gif" alt="Ultrasound Animation" class="image is-4by3">
             </div>
           </div>
-        </div>
-        </p>
 
-        <p>
-          As can be seen in Table II, the proposed ISM demonstrates its superiority over traditional models in
-          terms
-          of the three indicators, namely Dice-Similarity-Coefficient (DSC), Hausdorff-Distance (HD95) and
-          Intersection-Over-Union (IOU). The ISM model achieved significant improvements in multiple indicators:
-          its
-          DSC value increased by about 6 %, reaching 94.62 %, and the IOU value increased by about 11%, in complex
-          samples. Finally, a clear puncture point is calculated through the connection domain algorithm.
-          Experimentally, the success rate of selecting the suitable vein for puncture is 99.21%.
-        </p>
-        <p>
-          Training procedure of the FPN, UNet, PSPNet and ISM: (a) Dice Loss curve of FPN, UNet, PSPNet, ISM. (b)
-          ROC-AUC curve of FPN, UNet, PSPNet, ISM of testing picture. (c) The DSC curve of vein segmentation
-          results
-          using different models: FPN, UNet, PSPNet, LinkNet, ISM.
-        <div class="column is-fullwidth">
-          <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
-          <p style="text-align:center">Experimental Results</p>
-        </div>
-        </p>
+          <p>
+            As can be seen in Table II, the proposed ISM demonstrates its superiority over traditional models in
+            terms
+            of the three indicators, namely Dice-Similarity-Coefficient (DSC), Hausdorff-Distance (HD95) and
+            Intersection-Over-Union (IOU). The ISM model achieved significant improvements in multiple indicators:
+            its
+            DSC value increased by about 6 %, reaching 94.62 %, and the IOU value increased by about 11%, in complex
+            samples. Finally, a clear puncture point is calculated through the connection domain algorithm.
+            Experimentally, the success rate of selecting the suitable vein for puncture is 99.21%.
+          </p>
 
-        <!-- Example section where the GIF is replaced with MP4 -->
-        <div class="columns is-centered">
+          <p>
+            Training procedure of the FPN, UNet, PSPNet and ISM: (a) Dice Loss curve of FPN, UNet, PSPNet, ISM. (b)
+            ROC-AUC curve of FPN, UNet, PSPNet, ISM of testing picture. (c) The DSC curve of vein segmentation
+            results
+            using different models: FPN, UNet, PSPNet, LinkNet, ISM.
+          </p>
+
           <div class="column is-fullwidth">
-            <video controls class="image is-4by3">
-              <source src="./images/show.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <img src="./images/loss.png" alt="Experimental Results" class="image is-4by3">
+            <p style="text-align:center">Experimental Results</p>
           </div>
-        </div>
 
+          <!-- Example section where the GIF is replaced with MP4 -->
+          <div class="columns is-centered">
+            <div class="column is-fullwidth">
+              <video controls class="image is-4by3">
+                <source src="./images/show.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
 
-        <h2 class="title is-3">Control System</h2>
-        <div class="content has-text-justified">
-          <p>
-            The robot's control system integrates data from both NIR and ultrasound imaging to guide the needle with
-            high precision. Advanced algorithms process the imaging data in real-time, determining the optimal
-            puncture site, angle, and depth.
-          </p>
-          <p>
-            The system allows for dynamic adjustment during the procedure, compensating for any patient movement or
-            vein deformation. This ensures a high success rate and minimizes the risk of complications.
-          </p>
+          <h2 class="title is-3">Control System</h2>
+          <div class="content has-text-justified">
+            <p>
+              The robot's control system integrates data from both NIR and ultrasound imaging to guide the needle with
+              high precision. Advanced algorithms process the imaging data in real-time, determining the optimal
+              puncture site, angle, and depth.
+            </p>
+            <p>
+              The system allows for dynamic adjustment during the procedure, compensating for any patient movement or
+              vein deformation. This ensures a high success rate and minimizes the risk of complications.
+            </p>
+          </div>
+
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
               <img src="./images/control.png" alt="Control System" class="image is-4by3">
               <p style="text-align:center">Control System</p>
             </div>
           </div>
+          
         </div>
-
       </div>
-    </div>
     </div>
   </section>
 
