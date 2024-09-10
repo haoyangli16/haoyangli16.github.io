@@ -196,34 +196,88 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    <!-- Robot Design. -->
     <div class="columns is-centered">
-
-      <!-- Robot Design. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Robot Design</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3">Robot Design</h2>
+        <div class="content has-text-justified">
           <p>
-            Our venipuncture robot features a 9-DOF design with multiple units for precise vascular access. The compact structure includes positioning, support, information processing, and puncturing units, along with an advanced needle module.
+            Our venipuncture robot features a 6-DOF compact mechanism designed for precise vascular access. The robot's structure is built around a reliable short transmission chain, primarily consisting of precision ball screws and Maxon motors, ensuring high mechanical efficiency and accuracy.
+          </p>
+          <p>
+            The motor system comprises six key components:
+          </p>
+          <ul>
+            <li>Motors 1, 2, and 3 operate jointly for x-y plane movement</li>
+            <li>Motor 4 determines the puncture angle</li>
+            <li>Motor 5 controls needle movement along the y-direction</li>
+            <li>Motor 6 advances the needle to the vein puncture point</li>
+          </ul>
+          <p>
+            The transmission system boasts high axial stiffness, transmission accuracy, and mechanical efficiency, guaranteeing precise positioning and stable puncture processes.
+          </p>
+          <p>
+            A key feature is the 3-DOF Needle Module, which includes:
+          </p>
+          <ul>
+            <li>A linear stage driven by a lead screw spindle</li>
+            <li>A worm drive system for independent insertion angle control</li>
+            <li>A self-locking rotational joint for safety</li>
+            <li>Two ball screw mechanisms for precise needle movement</li>
+          </ul>
+          <p>
+            This design allows for accurate adjustment of puncture speed and dramatically improves puncture stability and needle tip positioning accuracy.
           </p>
           <img src="./static/images/robot_design.jpg" alt="Robot Design">
         </div>
       </div>
-      <!--/ Robot Design. -->
+    </div>
+    <!--/ Robot Design. -->
 
-      <!-- Vein Detection. -->
-      <div class="column">
+    <!-- Vein Detection. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
         <h2 class="title is-3">Vein Detection</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              The robot employs a dual imaging system combining NIR and ultrasound technologies for accurate vein detection and depth estimation. Our advanced algorithms process these images to determine the optimal puncture site and angle.
-            </p>
-            <img src="./static/images/vein_detection.jpg" alt="Vein Detection">
-          </div>
+        
+        <!-- Near Infrared. -->
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Near Infrared Imaging</h3>
+          <p>
+            The robot employs Near Infrared (NIR) imaging technology for accurate vein detection. This non-invasive method allows for clear visualization of superficial veins, enhancing the robot's ability to identify suitable puncture sites.
+          </p>
+          <img src="./static/images/nir_imaging.jpg" alt="Near Infrared Imaging">
+        </div>
+        <!--/ Near Infrared. -->
+
+        <!-- Ultrasound. -->
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Ultrasound Imaging</h3>
+          <p>
+            Complementing the NIR system, ultrasound technology is used for precise depth estimation and longitudinal vein imaging. The ultrasound device (st-1c transducer, frequency 7.5MHz) provides high-resolution images of vein cross-sections, enabling accurate calculation of puncture depth.
+          </p>
+          <img src="./static/images/ultrasound_imaging.jpg" alt="Ultrasound Imaging">
+        </div>
+        <!--/ Ultrasound. -->
+      </div>
+    </div>
+    <!--/ Vein Detection. -->
+
+    <!-- Control System. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Control System</h2>
+        <div class="content has-text-justified">
+          <p>
+            The robot's control system integrates data from both NIR and ultrasound imaging to guide the needle with high precision. Advanced algorithms process the imaging data in real-time, determining the optimal puncture site, angle, and depth.
+          </p>
+          <p>
+            The system allows for dynamic adjustment during the procedure, compensating for any patient movement or vein deformation. This ensures a high success rate and minimizes the risk of complications.
+          </p>
+          <img src="./static/images/control_system.jpg" alt="Control System">
         </div>
       </div>
-      <!--/ Vein Detection. -->
     </div>
+    <!--/ Control System. -->
 
     <!-- Experimental Results. -->
     <div class="columns is-centered">
