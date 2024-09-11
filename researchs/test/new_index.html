@@ -109,9 +109,6 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./images/demo.mp4" type="video/mp4">
-        </video>
         <h2 class="subtitle has-text-centered">
           Our <span class="dnerf">Venipuncture Robot</span> performs autonomous vascular access with high precision and
           safety.
@@ -147,6 +144,9 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <h2 class="title is-3">Video</h2>
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./images/demo.mp4" type="video/mp4">
+              </video>
               <div class="publication-video">
                 <iframe src="https://youtube.com/shorts/7bNZi72nQfc" frameborder="0" allow="autoplay; encrypted-media"
                   allowfullscreen></iframe>
@@ -243,11 +243,11 @@
 
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
-              <img src="./images/mixer_unet.png" alt="NIR Method - Mixer U-Net" class="image is-4by3">
+              <img src="./images/mixer_unet.png" alt="NIR Method - Mixer U-Net" class="interpolation-image">
               <p style="text-align:center">NIR Method - Mixer U-Net</p>
             </div>
             <div class="column is-fullwidth">
-              <img src="./images/dual_in_dual_out.png" alt="NIR Method - Dual-In-Dual-Out" class="image is-4by3">
+              <img src="./images/dual_in_dual_out.png" alt="NIR Method - Dual-In-Dual-Out" class="interpolation-image">
               <p style="text-align:center">NIR Method - Dual-In-Dual-Out</p>
             </div>
           </div>
@@ -268,11 +268,11 @@
 
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
-              <img src="./images/near_infrared_results.png" alt="NIR Results" class="image is-4by3">
+              <img src="./images/near_infrared_results.png" alt="NIR Results" class="interpolation-image">
               <p style="text-align:center">NIR Results</p>
             </div>
             <div class="column is-fullwidth">
-              <img src="./images/infra.gif" alt="NIR Animation" class="image is-4by3">
+              <img src="./images/infra.gif" alt="NIR Animation" class="interpolation-image">
               <p style="text-align:center">NIR Animation</p>
             </div>
           </div>
@@ -358,7 +358,7 @@
           <!-- Example section where the GIF is replaced with MP4 -->
           <div class="columns is-centered">
             <div class="column is-fullwidth">
-              <video controls class="image is-4by3">
+              <video controls class="interpolation-image">
                 <source src="./images/show.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
