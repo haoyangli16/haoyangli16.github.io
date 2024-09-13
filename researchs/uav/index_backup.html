@@ -124,40 +124,17 @@
             </p>
           </div>
 
-          <h2 class="title is-3">Introduction</h2>
-          <div class="content has-text-justified">
-            <p>
-              Visual tracking is a fundamental task in intelligent unmanned aerial systems, aiming to estimate the location of an object in each frame given the initial state. It has widespread applications such as autonomous landing, aerial manipulation operations, and self-localization. However, in low-light conditions, the performance of existing trackers significantly degrades due to challenges like low illumination, high-level noise, and low contrast. This makes nighttime aerial tracking a formidable challenge.
-            </p>
-            <p>
-              Existing methods often rely on single-view information and neglect the significant differences in viewpoint and motion pattern disparities across different views. Moreover, shadow occlusion, uneven lighting distribution, and disruptive noise exacerbate multi-view feature differences at nighttime, leading to missed targets or tracking failures.
-            </p>
-            <p>
-              To address these issues, we propose MVDANT, a domain adaptation framework that utilizes aerial multi-view source domains for nighttime aerial tracking. By capturing images from multiple views in daytime scenarios, we employ multi-view domain adaptation to narrow the gap between daytime and nighttime conditions. This approach enhances the robustness and performance of UAV tracking in low-light environments.
-            </p>
-          </div>
 
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
             <p>
-              Our MVDANT framework addresses the challenges of nighttime aerial tracking by leveraging multi-view domain adaptation. The key components of our method are:
+              Our MVDANT framework consists of three main components:
             </p>
-            <h3 class="title is-4">Feature Alignment</h3>
-            <p>
-              We introduce a multi-view feature aligner with a novel transformer structure. This aligner transforms low-level features into high-level features by incorporating multi-view information and semantic cues, improving feature extraction. The multi-view feature aligner consists of an encoder and decoder, which aggregate inter-dependencies between various features and enhance view-invariant features with semantic information.
-            </p>
-            <div class="column is-fullwidth">
-              <img src="./images/feature_aligner.png" class="interpolation-image" alt="Multi-View Feature Aligner" />
-              <p style="text-align:center">Detailed workflow of the Multi-view feature aligner</p>
-            </div>
-            <h3 class="title is-4">Tracker Alignment</h3>
-            <p>
-              For each perspective, we employ discriminators to distinguish daytime images from nighttime images, facilitating adversarial learning. By using a gradient reversal layer between the feature aligner and the discriminator, we align the feature distributions of the source and target domains. This process helps the model to generalize better to nighttime conditions.
-            </p>
-            <h3 class="title is-4">Overall Objective</h3>
-            <p>
-              The overall training loss of our framework combines classification and regression losses with adversarial and consistency losses. This combination ensures that the model not only performs well on the tracking task but also effectively adapts to the target domain. The consistency loss regularizes the tracker’s prediction results for the same target image under different perspectives, further enhancing robustness.
-            </p>
+            <ul>
+              <li>Feature Alignment: Using a multi-view feature aligner with a novel transformer structure</li>
+              <li>Tracker Alignment: Employing discriminators for each perspective to distinguish daytime from nighttime images</li>
+              <li>Overall Objective: Combining classification, regression, adversarial, and consistency losses</li>
+            </ul>
           </div>
 
           <div class="column is-fullwidth">
@@ -168,17 +145,13 @@
           <h2 class="title is-3">Results</h2>
           <div class="content has-text-justified">
             <p>
-              We conducted comprehensive experiments on two challenging nighttime UAV benchmarks: NAT2021 and UAVDark70. Our MVDANT framework demonstrates superior performance compared to state-of-the-art trackers in terms of precision, normalized precision, and success rate.
+              MVDANT outperforms state-of-the-art trackers on challenging nighttime UAV benchmarks:
             </p>
-            <p>
-              <strong>Overall Performance:</strong> On the NAT2021-test set, MVDANT achieves a success rate of 0.483, outperforming the baseline tracker by 2.6%. On the UAVDark70 dataset, MVDANT achieves a success rate of 0.496, which is a 1.2% improvement over the best-performing existing tracker.
-            </p>
-            <p>
-              <strong>Long-term Tracking Evaluation:</strong> To validate the effectiveness of our framework in long-term tracking performance, we evaluated it on the NAT2021-L-test set. MVDANT outperformed the runner-up by 7.1% in precision, 11.0% in normalized precision, and 5.9% in success rate, demonstrating its robust performance in long-term tracking scenarios.
-            </p>
-            <p>
-              <strong>Attribute-Based Performance:</strong> We also assessed the robustness of our tracker against specific challenges such as illumination variation, low resolution, fast motion, and viewpoint change. MVDANT achieved a success rate of 0.521 for viewpoint change on UAVDark70 and 0.476 for fast motion on the NAT2021-test, improving the existing best performance by approximately 4.3%.
-            </p>
+            <ul>
+              <li>2.6% improvement in success rate on NAT2021-test</li>
+              <li>1.2% improvement in success rate on UAVDark70</li>
+              <li>Significant improvements in long-term tracking performance on NAT2021-L-test</li>
+            </ul>
           </div>
 
           <div class="column is-fullwidth">
@@ -188,23 +161,11 @@
 
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
-              <img src="./images/heatmap.png" alt="Attribute-Based Performance" class="interpolation-image">
-              <p style="text-align:center">Attribute-Based Performance Analysis</p>
+              <img src="./images/heatmap.png" alt="Ultrasound Results" class="interpolation-image">
             </div>
-          </div>
-
-          <h2 class="title is-3">Ablation Study</h2>
-          <div class="content has-text-justified">
-            <p>
-              To investigate the performance contributions of different components in MVDANT, we conducted ablation studies. We compared variations of our framework with different modules activated, including the adversarial multi-source domain adaptation (ADA), multi-view feature aligner (MFA), and tracker alignment (TA).
-            </p>
-            <p>
-              The results indicate that adding the entire MVDANT framework improved the normalized precision and success rate significantly compared to the baseline tracker. Specifically, the normalized precision increased by 26.67%, and the success rate increased by 32.01%, demonstrating the effectiveness of the added modules.
-            </p>
-            <div class="column is-fullwidth">
-              <img src="./images/ablation_study.png" class="interpolation-image" alt="Ablation Study Results" />
-              <p style="text-align:center">Ablation Study Results on NAT2021-L-test</p>
-            </div>
+            <!-- <div class="column is-fullwidth">
+              <img src="./images/ultra.gif" alt="Ultrasound Animation" class="interpolation-image">
+            </div> -->
           </div>
 
           <h2 class="title is-3">Real-World Tests</h2>
@@ -249,7 +210,7 @@
       <pre><code>@article{li2023multiview,
   title={Multi-View Domain Adaptation for Nighttime Aerial Tracking},
   author={Li, Haoyang and Zheng, Guangze and Li, Sihang and Ye, Junjie and Fu, Changhong},
-  journal={arXiv preprint arXiv:2310.12345},
+  journal={arXiv preprint arXiv:2023.xxxxx},
   year={2023}
 }</code></pre>
     </div>
