@@ -1,28 +1,23 @@
 # Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+title: Harris Li
+position: Research Scientist
+affiliation: Department of Computer Science and Engineering, UC San Diego
+email: hal168 (at) ucsd.edu
 
 # Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: robotics, manipulation, sim2real, AI for design
+description: Harris Li is a Research Scientist at UC San Diego, focusing on robotic manipulation, sim2real transfer, and AI for design.
+canonical: # Keep your actual website URL here
 
 # Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
+github_link: https://github.com/haoyangli16
+# Other social links can be removed or updated as needed
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+# Images
+# Update these paths to match your actual image locations
+avatar: images/website.JPG
+favicon: images/logo.png
+favicon_dark: images/logo.png  # You might want to create a dark version
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
