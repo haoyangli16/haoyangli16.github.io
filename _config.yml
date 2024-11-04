@@ -5,17 +5,19 @@ affiliation: Department of Computer Science and Engineering, UC San Diego
 email: hal168 (at) ucsd.edu
 
 # Search Engine Optimization (SEO)
-keywords: robotics, manipulation, sim2real, AI for design
+keywords: Robotics, Manipulation, Sim2Real, AI for Design, AI for health care
 description: Harris Li is a Research Scientist at UC San Diego, focusing on robotic manipulation, sim2real transfer, and AI for design.
 canonical: # Keep your actual website URL here
 
 # Links 
+google_scholar: https://github.com/haoyangli16
 github_link: https://github.com/haoyangli16
-# Other social links can be removed or updated as needed
+linkedin: https://www.linkedin.com/in/haoyang-li-174990297/
+twitter: https://x.com/Haoyang1i
 
 # Images
 # Update these paths to match your actual image locations
-avatar: images/website.JPG
+avatar: images/haoyang_website.jpg
 favicon: images/logo.png
 favicon_dark: images/logo.png  # You might want to create a dark version
 
