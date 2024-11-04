@@ -1,0 +1,22 @@
+main:
+
+  - title: Portable Venipuncture Robot for Autonomous Vascular Access
+    authors: <strong>Haoyang Li*</strong>, Tenghui Xie*, Jinhai Pan, Zhiyuan Wu, Peng Qi and et. al. (*Corresponding authors)
+    conference_short: ASME
+    conference: ASME Student Mechanism and Robot Design Competition <strong>(Finalist)</strong>, 2022.
+    pdf: https://arxiv.org/pdf/2306.00988.pdf
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    page: https://heailab.github.io/venibot/
+    image: ./images/venibot-demo.gif
+    notes: 2021 MIT Technology Review
+
+  - title: "Multi-View Domain Adaptation for Nighttime Aerial Tracking"
+    authors: <strong>Haoyang Li</strong>, Guangze Zheng, Sihang Li, Junjie Ye, Changhong Fu     
+    conference_short: RAL
+    conference: IEEE Robotics and Automation Letters, 2023.
+    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    page: https://heailab.github.io/MV-NAT/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/    
+    notes: Shanghai Outstanding Graduate Thesis
+    image: ./images/nat-demo.gif
