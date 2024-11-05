@@ -1,7 +1,7 @@
 # Basic Information 
 title: Haoyang Li 
 position: Research Scientist
-affiliation: Department of Computer Science and Engineering, UC San Diego
+affiliation: Dept. of Computer Science and Engineering, UC San Diego
 email: hal168 (at) ucsd.edu
 
 # Search Engine Optimization (SEO)
@@ -23,7 +23,7 @@ favicon_dark: images/logo.png  # You might want to create a dark version
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
+enable_footnote: false
 
 # Auto Dark Mode
 # You may use the option to disable the automatic dark theme

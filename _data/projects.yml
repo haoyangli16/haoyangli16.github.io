@@ -6,7 +6,7 @@ main:
     code: https://github.com/haoyangli16/vr-teleop
     # video: hardware/vr_teleop/demo.mp4
     # notes: First VR-based Data Collection Platform
-    
+
   - title: Sim2Real Efficient Policy Training
     description: Innovative research in robotic manipulation through advanced simulation techniques, bridging the gap between simulated environments and real-world applications. The project focuses on developing robust control strategies that can effectively transfer from simulation to physical robots.
     image: images/sim2real_demo.gif
@@ -36,7 +36,7 @@ main:
     code: https://github.com/haoyangli16/ice-robot
     # notes: Autonomous De-icing Solution
 
-  - title: Machining and Fabrication Skills
+  - title: Machining and Fabrication
     description: Proficient in precision fabrication, utilizing laser cutting for aluminum and stainless steel sheet panels, 3D printing in PLA and soft TPU materials, and aluminum profile assembly. Experienced in creating support structures, including platforms for bimanual robotic arms and various robust frameworks for advanced robotics applications.
     image: images/machining-demo.gif
     page: hardware/3d_print/summary.html
