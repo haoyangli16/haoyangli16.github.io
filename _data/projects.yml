@@ -1,6 +1,6 @@
 main:
   - title: VR-Enhanced Dual-Arm Dexterous Teleoperation
-    description: A cutting-edge teleoperation system leveraging Meta Quest 3 and Rokoko Gloves for precise robotic manipulation. This pioneering system serves as the lab's first VR data collection platform, successfully gathering over 2,000 robot arm manipulation demonstrations. The project integrates advanced VR technology with dexterous robotic hands and plans to incorporate electrotactile stimulation for enhanced tactile feedback capabilities.
+    description: Innovative teleoperation system using Meta Quest 3 and Rokoko Gloves for precise robotic manipulation. Over 2,000 robot arm manipulation demonstrations were collected. Electrotactile stimulation will improve tactile feedback in the project's advanced VR technology and dexterous robotic hands.
     image: images/vr-tele-demo.gif
     page: hardware/vr_teleop/summary.html
     code: https://github.com/haoyangli16/vr-teleop
@@ -15,7 +15,7 @@ main:
     # notes: Bridging Simulation and Reality
 
   - title: Next-Generation Home Cleaning Robot 
-    description: A next-generation robotic vacuum system featuring an integrated lightweight robotic arm for flexible home applications. Hillbot combines advanced manipulation capabilities with intelligent navigation systems to perform tasks that traditional cleaning robots can't handle. The system integrates rule-based GraspNet for reliable object handling and ROS2 Navigation2 stack for efficient navigation, enabling tasks from garbage collection to board cleaning and box manipulation.
+    description: Next-generation robotic vacuum with flexible home use and lightweight robotic arm. It uses advanced navigation and manipulation to complete tasks that other cleaning robots cannot. System uses rule-based GraspNet for reliable object handling and ROS2 Navigation2 stack for effective navigation from garbage collection to board cleaning and box manipulation.
     image: images/cleaning_robot_demo.gif
     page: hardware/cleaning_robot/summary.html
     video: hardware/cleaning_robot/robot_video_smaller.mp4
