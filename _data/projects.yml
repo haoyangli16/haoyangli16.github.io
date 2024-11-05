@@ -1,22 +1,35 @@
 main:
+  - title: Advanced Cleaning Robot - Hillbot
+    description: A pioneering robotic solution designed to revolutionize household automation. As the first demo model in its series, Hillbot combines advanced robotic arms with intelligent navigation systems to perform tasks that traditional cleaning robots can't handle. From garbage collection to board cleaning and box manipulation, Hillbot represents the next generation of home robotics.
+    image: hardware/cleaning_robot/hillbot.png
+    page: hardware/cleaning_robot/summary.html
+    code: https://github.com/haoyangli16/hillbot
+    notes: Next Generation Home Robotics
 
-  - title: Portable Venipuncture Robot for Autonomous Vascular Access
-    authors: <strong>Haoyang Li*</strong>, Tenghui Xie*, Jinhai Pan, Zhiyuan Wu, Peng Qi and et. al. (*Corresponding authors)
-    conference_short: ASME
-    conference: ASME Student Mechanism and Robot Design Competition <strong>(Finalist)</strong>, 2022.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    # code: https://github.com/MrGiovanni/ContinualLearning
-    page: https://heailab.github.io/venibot/
-    image: ./images/venibot-demo.gif
-    notes: 2021 MIT Technology Review
+  - title: Sim2Real Robotic Manipulation
+    description: Innovative research in robotic manipulation through advanced simulation techniques, bridging the gap between simulated environments and real-world applications. The project focuses on developing robust control strategies that can effectively transfer from simulation to physical robots.
+    image: hardware/sim2real/sim2real_demo.png
+    page: hardware/sim2real/summary.html
+    code: https://github.com/haoyangli16/sim2real
+    notes: Bridging Simulation and Reality
 
-  - title: "Multi-View Domain Adaptation for Nighttime Aerial Tracking"
-    authors: <strong>Haoyang Li</strong>, Guangze Zheng, Sihang Li, Junjie Ye, Changhong Fu     
-    conference_short: RAL
-    conference: IEEE Robotics and Automation Letters, 2023.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://heailab.github.io/MV-NAT/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/    
-    notes: Shanghai Outstanding Graduate Thesis
-    image: ./images/nat-demo.gif
+  - title: Advanced Grasp Generation
+    description: Innovative project in robotic manipulation developing sophisticated algorithms for grasp generation using simulations that integrate real-world physics and complex scenarios. The focus is on enhancing the accuracy and reliability of robotic grips in cluttered environments.
+    image: hardware/grasp_generation/grasp_pose_ycb.png
+    page: hardware/grasp_generation/summary.html
+    code: https://github.com/haoyangli16/grasp-generation
+    notes: Advanced Manipulation Techniques
+
+  - title: De-Icing Intelligent Robot
+    description: An intelligent robotic system designed for autonomous de-icing operations, combining advanced control systems with specialized hardware for efficient ice removal in challenging conditions.
+    image: hardware/ice/cover.png
+    page: hardware/ice/CoRL.html
+    code: https://github.com/haoyangli16/ice-robot
+    notes: Autonomous De-icing Solution
+
+  - title: 3D Printing and Soft Materials
+    description: Exploration of advanced 3D printing techniques with a focus on soft TPU materials. This project merges the boundaries of imagination and reality, offering unprecedented flexibility in creating complex structures for robotics applications.
+    image: hardware/3d_print/xarm.png
+    page: hardware/3d_print/summary.html
+    code: https://github.com/haoyangli16/3d-print
+    notes: Innovative Manufacturing Technologies

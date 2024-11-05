@@ -6,38 +6,30 @@
     {% if mod == 1 %}
     <div class="row d-flex justify-content-between mb-4">
     {% endif %}
-      
       <div class="project-card">
         {% if link.image %}
         <div class="project-image">
           <img src="{{ link.image }}" alt="{{ link.title }}">
         </div>
         {% endif %}
-        
         <div class="project-content">
           <h3 class="project-title">{{ link.title }}</h3>
-          
           {% if link.description %}
           <p class="project-description">{{ link.description }}</p>
           {% endif %}
-          
           {% if link.notes %}
           <p class="project-notes"><i>{{ link.notes }}</i></p>
           {% endif %}
-          
           <div class="project-links">
             {% if link.pdf %}
             <a href="{{ link.pdf }}" class="link-button">PDF</a>
-            {% endif %}
-            
+            {% endif %}            
             {% if link.page %}
             <a href="{{ link.page }}" class="link-button">Project Page</a>
             {% endif %}
-            
             {% if link.code %}
             <a href="{{ link.code }}" class="link-button">Code</a>
             {% endif %}
-            
             {% if link.video %}
             <a href="{{ link.video }}" class="link-button">Video</a>
             {% endif %}
