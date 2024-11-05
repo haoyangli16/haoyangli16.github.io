@@ -1,35 +1,43 @@
 main:
-  - title: Advanced Cleaning Robot - Hillbot
-    description: A pioneering robotic solution designed to revolutionize household automation. As the first demo model in its series, Hillbot combines advanced robotic arms with intelligent navigation systems to perform tasks that traditional cleaning robots can't handle. From garbage collection to board cleaning and box manipulation, Hillbot represents the next generation of home robotics.
-    image: ./images/cleaning_robot_demo.gif
+  - title: Next-Generation Home Cleaning Robot 
+    description: A next-generation robotic vacuum system featuring an integrated lightweight robotic arm for flexible home applications. Hillbot combines advanced manipulation capabilities with intelligent navigation systems to perform tasks that traditional cleaning robots can't handle. The system integrates rule-based GraspNet for reliable object handling and ROS2 Navigation2 stack for efficient navigation, enabling tasks from garbage collection to board cleaning and box manipulation.
+    image: hardware/cleaning_robot/hillbot.png
     page: hardware/cleaning_robot/summary.html
+    video: hardware/cleaning_robot/robot_video_smaller.mp4
     code: https://github.com/haoyangli16/hillbot
-    notes: Next Generation Home Robotics
+    notes: First Real-World Robot Demo of Hillbot
 
-  - title: Sim2Real Robotic Manipulation
+  - title: Sim2Real Efficient Policy Training
     description: Innovative research in robotic manipulation through advanced simulation techniques, bridging the gap between simulated environments and real-world applications. The project focuses on developing robust control strategies that can effectively transfer from simulation to physical robots.
     image: images/sim2real_demo.gif
     page: hardware/sim2real/summary.html
     code: https://github.com/haoyangli16/sim2real
-    notes: Bridging Simulation and Reality
+    # notes: Bridging Simulation and Reality
 
-  - title: Advanced Grasp Generation
-    description: Innovative project in robotic manipulation developing sophisticated algorithms for grasp generation using simulations that integrate real-world physics and complex scenarios. The focus is on enhancing the accuracy and reliability of robotic grips in cluttered environments.
-    image: hardware/grasp_generation/cgn.png
+  - title: VR-Enhanced Dual-Arm Dexterous Teleoperation
+    description: A cutting-edge teleoperation system leveraging Meta Quest 3 and Rokoko Gloves for precise robotic manipulation. This pioneering system serves as the lab's first VR data collection platform, successfully gathering over 2,000 robot arm manipulation demonstrations. The project integrates advanced VR technology with dexterous robotic hands and plans to incorporate electrotactile stimulation for enhanced tactile feedback capabilities.
+    image: images/vr-tele-demo.gif
+    page: hardware/vr_teleop/summary.html
+    code: https://github.com/haoyangli16/vr-teleop
+    # video: hardware/vr_teleop/demo.mp4
+    notes: First VR-based Data Collection Platform
+
+  - title: Grasp Pose Generation
+    description: This project developed an AI-driven grasping and design pipeline for robotic manipulation. It generated parallel-jaw grasp poses, validated them in simulation, and created a grasp motion planner, collecting over 200 demonstrations. Additionally, the pipeline optimized the humanoid robot's mechanical design, enhancing its grasping capabilities.
     page: hardware/grasp_generation/summary.html
     code: https://github.com/haoyangli16/grasp-generation
-    notes: Advanced Manipulation Techniques
+    # notes: Advanced Manipulation Techniques
 
   - title: De-Icing Intelligent Robot
     description: An intelligent robotic system designed for autonomous de-icing operations, combining advanced control systems with specialized hardware for efficient ice removal in challenging conditions.
     image: hardware/ice/cover.png
     page: hardware/ice/CoRL.html
     code: https://github.com/haoyangli16/ice-robot
-    notes: Autonomous De-icing Solution
+    # notes: Autonomous De-icing Solution
 
   - title: 3D Printing and Soft Materials
     description: Exploration of advanced 3D printing techniques with a focus on soft TPU materials. This project merges the boundaries of imagination and reality, offering unprecedented flexibility in creating complex structures for robotics applications.
     image: hardware/3d_print/xarm.png
     page: hardware/3d_print/summary.html
     code: https://github.com/haoyangli16/3d-print
-    notes: Innovative Manufacturing Technologies
+    # notes: Innovative Manufacturing Technologies
