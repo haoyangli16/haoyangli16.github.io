@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-👋 My name is Haoyang Li, and I am a Research Scientist in the [Department of Computer Science
+Hello! 👋 My name is Haoyang Li, and I am a Research Scientist in the [Department of Computer Science
 and Engineering](https://cse.ucsd.edu/) at [UC San Diego](https://ucsd.edu/), where I am advised by
 [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/). I obtained my bachelor's degree in
 Intelligent Manufacturing from [Tongji University](https://en.tongji.edu.cn/p/#/). I have also had
@@ -15,7 +15,7 @@ science-from [Tongji University](https://en.tongji.edu.cn/p/#/). I have also had
 the opportunity to work with [Prof. Rui Chen](https://callmeray.github.io/homepage/Home.html)
 at [Tsinghua University](https://www.tsinghua.edu.cn/en/), and focused on
 UAV research in the [Vision4Robotics Group](https://vision4robotics.github.io/). -->
-During my undergraduate years, I also led an entrepreneurial initiative focused on healthcare robotics (see [here](http://www.xinhuanet.com/english/2021-02/02/c_139715877.htm))🏄🏻‍♂️.
+During my undergraduate years, I also led an entrepreneurial initiative focused on healthcare robotics (see [here](http://www.xinhuanet.com/english/2021-02/02/c_139715877.htm)) 🏄🏻‍♂️.
 
 🏢 Office: Franklin Antonio Hall 3302 OR (Atkinson Hall 5202), 9500 Gilman Drive, La Jolla, CA 92093 
 
