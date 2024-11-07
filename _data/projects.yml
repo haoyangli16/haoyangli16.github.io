@@ -2,7 +2,7 @@ main:
   - title: VR-Enhanced Dual-Arm Dexterous Teleoperation
     description: Innovative teleoperation system using Meta Quest 3 and Rokoko Gloves for precise robotic manipulation. Over 2,000 robot arm manipulation demonstrations were collected. Electrotactile stimulation will improve tactile feedback in the project's advanced VR technology and dexterous robotic hands.
     image: images/vr-tele-demo.gif
-    page: hardware/vr_teleop/summary.html
+    page: https://pages.sudoai.co/vr-doc-liuyulinn-52c12f2b1e585564248de196be279bee119076cabdca6a/
     code: https://github.com/haoyangli16/vr-teleop
     # video: hardware/vr_teleop/demo.mp4
     # notes: First VR-based Data Collection Platform
