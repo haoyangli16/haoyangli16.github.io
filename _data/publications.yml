@@ -1,6 +1,6 @@
 main:
   - title: "Robotic Visual Instruction"
-    authors: Yanbang Li, ZiYang Gong, <strong>Haoyang Li</strong>, Xiaoqi Huang, Haolan Kang, Guangping Bai, Xianzheng Ma    
+    authors: Yanbang Li, Ziyang Gong, <strong>Haoyang Li</strong>, Xiaoqi Huang, Haolan Kang, Guangping Bai, Xianzheng Ma    
     conference_short: CVPR
     conference: IEEE Conference on Computer Vision and Pattern Recognition, 2025.
     pdf: https://openreview.net/forum?id=NZzGozmYkm&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3Dthecvf.com%2FCVPR%2F2025%2FConference%2FAuthors%23your-submissions)
