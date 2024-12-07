@@ -22,8 +22,8 @@ During my undergraduate years, I also led an entrepreneurial initiative focused 
 ## Research Interests
 <!-- - **Computer Vision:** image recognition, image generation, video captioning
 - **Machine Learning:** meta-learning, incremental learning, transfer learning -->
-- **Robotic Manipulation:** Mobile Manipulation, Reinforcement Learning, Imitation Learning
-- **Sim2Real:** Real2Sim2Real Pipeline, Robotic Data Scaling, 3D Vision
+- **Robotic Manipulation:** Mobile Manipulation, Soft Body Manipulation, VLA, Human-Robot Interaction
+- **Sim2Real:** Real2Sim2Real, Robotic Data Scaling, 3D Vision
 - **AI for Design:** Mechanical Structure Optimization, Personalized Surgery
 
 ## News
