@@ -8,7 +8,7 @@ Hi!👋 My name is Henry Li, and I am a Research Scientist in the [Department of
 and Engineering](https://cse.ucsd.edu/) at [UC San Diego](https://ucsd.edu/), where I am advised by
 [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/). I obtained my bachelor's degree in
 Intelligent Manufacturing from [Tongji University](https://en.tongji.edu.cn/p/#/). I also had
-the opportunity to help with robot development and embodied AI research at startup [Hillbot](https://www.hillbot.ai/).
+the opportunity to help with robot development and embodied AI research at startup [Hillbot](https://www.hillbot.ai/) as the 1st Intern.
 <!-- 
 —an interdisciplinary major combining mechanics and computer
 science-from [Tongji University](https://en.tongji.edu.cn/p/#/). I have also had
