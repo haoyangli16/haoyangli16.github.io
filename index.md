@@ -32,8 +32,8 @@ During my undergraduate years, I also led an entrepreneurial initiative focused 
 - **[May. 2023]** Awarded with Outstanding Graduate of Shanghai. 
 - **[Mar. 2022]** First Prize in Chinese College Students Entrepreneurship Competition.
 
-{% include_relative _includes/projects.md %}
-
 {% include_relative _includes/publications.md %}
+
+{% include_relative _includes/projects.md %}
 
 {% include_relative _includes/services.md %}
