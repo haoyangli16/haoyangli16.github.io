@@ -16,13 +16,13 @@ at [Tsinghua University](https://www.tsinghua.edu.cn/en/), and focused on
 UAV research in the [Vision4Robotics Group](https://vision4robotics.github.io/). -->
 During my undergraduate years, I also led an entrepreneurial initiative focused on healthcare robotics (see [here](http://www.xinhuanet.com/english/2021-02/02/c_139715877.htm)) 🏄🏻‍♂️.
 
-🏢 Office: Franklin Antonio Hall 3302 OR (Atkinson Hall 5202), 9500 Gilman Drive, La Jolla, CA 92093 
+🏢 Office: Franklin Antonio Hall 3302 or (Atkinson Hall 5202), 9500 Gilman Drive, La Jolla, CA 92093 
 
 ## Research Interests
 <!-- - **Computer Vision:** image recognition, image generation, video captioning
 - **Machine Learning:** meta-learning, incremental learning, transfer learning -->
-- **Robotic Manipulation:** Mobile Manipulation, Soft Body Manipulation, VLA, Human-Robot Interaction
-- **Sim2Real:** Real2Sim2Real, Robotic Data Scaling, 3D Vision
+- **Robotic Manipulation:** Mobile Manipulation, Soft Body Manipulation, Human-Robot Interaction
+- **Visual-Lanugage-Action Model:** Real2Sim2Real, Robotic Data Scaling, 3D Vision
 - **AI for Design:** Mechanical Structure Optimization, Personalized Surgery
 
 ## News
