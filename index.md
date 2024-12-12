@@ -26,6 +26,7 @@ During my undergraduate years, I also led an entrepreneurial initiative focused 
 - **AI for Design:** Mechanical Structure Optimization, Personalized Surgery
 
 ## News
+- **[Nov. 2024]** Hillbot realised the first fully autonomous robot [demo](https://blog.hillbot.ai/meet-hillbot-alpha) trained primarily through simulation technology.
 - **[Jun. 2024]** Made the first real-world robot demo of Hillbot.
 - **[Nov. 2023]** Early participant in embodied intelligence startups Hillbot AI.
 - **[Aug. 2023]** Joined UC San Diego as a Research Scientist.
