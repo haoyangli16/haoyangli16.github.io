@@ -4,10 +4,10 @@ layout: homepage
 
 ## About Me
 
-Hi!👋 My name is Harry Li, and I am a Research Scientist in the [Department of Computer Science
+Hi!👋 My name is **Harry Li**, and I am a Research Scientist in the [Department of Computer Science
 and Engineering](https://cse.ucsd.edu/) at [UC San Diego](https://ucsd.edu/), where I am advised by
 [Prof. Hao Su](https://cseweb.ucsd.edu/~haosu/). I obtained my bachelor's degree in
-Intelligent Manufacturing from [Tongji University](https://en.tongji.edu.cn/p/#/). I also contributed to robot development and embodied AI research at startup [Hillbot](https://www.hillbot.ai/) as the **1st Intern**.
+Intelligent Manufacturing from [Tongji University](https://en.tongji.edu.cn/p/#/). I also contributed to robot development and embodied AI research at startup [Hillbot](https://www.hillbot.ai/) as the **early member**.
 <!-- 
 —an interdisciplinary major combining mechanics and computer
 science-from [Tongji University](https://en.tongji.edu.cn/p/#/). I have also had
